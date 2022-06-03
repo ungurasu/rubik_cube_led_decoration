@@ -1,0 +1,3319 @@
+
+led test 1 meg.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00001230  000012a4  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000d8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000005b  00000000  00000000  000012a4  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000088  00000000  00000000  000012ff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0000167d  00000000  00000000  00001387  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000008ab  00000000  00000000  00002a04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000fe7  00000000  00000000  000032af  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000001b4  00000000  00000000  00004298  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000286  00000000  00000000  0000444c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000b68  00000000  00000000  000046d2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000078  00000000  00000000  0000523a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .text         00000004  00001228  00001228  0000129c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000052b4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text._delay_s 00000032  0000109c  0000109c  00001110  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .text.passOneA 0000001a  0000116a  0000116a  000011de  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.passOneC 0000001a  00001184  00001184  000011f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.passZeroA 0000001a  0000119e  0000119e  00001212  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.passZeroC 0000001a  000011b8  000011b8  0000122c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.passResetA 00000010  000011e8  000011e8  0000125c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.passResetC 00000010  000011f8  000011f8  0000126c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.passBar 000000a8  00000f36  00000f36  00000faa  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.getBitsFromCube 000003d2  00000742  00000742  000007b6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.initCube 0000007a  00000fde  00000fde  00001052  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.displayCube 000000b8  00000dca  00000dca  00000e3e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.shiftVector 00000142  00000c88  00000c88  00000cfc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.doMove  0000066a  000000d8  000000d8  0000014c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.main    00000174  00000b14  00000b14  00000b88  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.libgcc.div 00000028  000010fc  000010fc  00001170  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.libgcc.div 00000028  00001124  00001124  00001198  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .data         00000004  00800100  0000122c  000012a0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 30 .text.avrlibc 000000b4  00000e82  00000e82  00000ef6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.libgcc.div 0000002e  000010ce  000010ce  00001142  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text.libgcc.div 00000010  00001208  00001208  0000127c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.libgcc.mul 00000016  000011d2  000011d2  00001246  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.libgcc.mul 00000010  00001218  00001218  0000128c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.libgcc.div 00000044  00001058  00001058  000010cc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.libgcc.mul 0000001e  0000114c  0000114c  000011c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 42 00 	jmp	0x84	; 0x84 <__ctors_end>
+   4:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+   8:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+   c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  10:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  14:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  18:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  1c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  20:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  24:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  28:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  2c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  30:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  34:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  38:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  3c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  40:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  44:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  48:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  4c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  50:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  54:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  58:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  5c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  60:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  64:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  68:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  6c:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  70:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  74:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+  78:	0c 94 14 09 	jmp	0x1228	; 0x1228 <__bad_interrupt>
+
+0000007c <.dinit>:
+  7c:	01 00       	.word	0x0001	; ????
+  7e:	01 04       	cpc	r0, r1
+  80:	00 12       	cpse	r0, r16
+  82:	2c 00       	.word	0x002c	; ????
+
+00000084 <__ctors_end>:
+  84:	11 24       	eor	r1, r1
+  86:	1f be       	out	0x3f, r1	; 63
+  88:	cf ef       	ldi	r28, 0xFF	; 255
+  8a:	d4 e0       	ldi	r29, 0x04	; 4
+  8c:	de bf       	out	0x3e, r29	; 62
+  8e:	cd bf       	out	0x3d, r28	; 61
+
+00000090 <__do_copy_data>:
+  90:	ec e7       	ldi	r30, 0x7C	; 124
+  92:	f0 e0       	ldi	r31, 0x00	; 0
+  94:	40 e0       	ldi	r20, 0x00	; 0
+  96:	17 c0       	rjmp	.+46     	; 0xc6 <__do_clear_bss+0x8>
+  98:	b5 91       	lpm	r27, Z+
+  9a:	a5 91       	lpm	r26, Z+
+  9c:	35 91       	lpm	r19, Z+
+  9e:	25 91       	lpm	r18, Z+
+  a0:	05 91       	lpm	r16, Z+
+  a2:	07 fd       	sbrc	r16, 7
+  a4:	0c c0       	rjmp	.+24     	; 0xbe <__do_clear_bss>
+  a6:	95 91       	lpm	r25, Z+
+  a8:	85 91       	lpm	r24, Z+
+  aa:	ef 01       	movw	r28, r30
+  ac:	f9 2f       	mov	r31, r25
+  ae:	e8 2f       	mov	r30, r24
+  b0:	05 90       	lpm	r0, Z+
+  b2:	0d 92       	st	X+, r0
+  b4:	a2 17       	cp	r26, r18
+  b6:	b3 07       	cpc	r27, r19
+  b8:	d9 f7       	brne	.-10     	; 0xb0 <__do_copy_data+0x20>
+  ba:	fe 01       	movw	r30, r28
+  bc:	04 c0       	rjmp	.+8      	; 0xc6 <__do_clear_bss+0x8>
+
+000000be <__do_clear_bss>:
+  be:	1d 92       	st	X+, r1
+  c0:	a2 17       	cp	r26, r18
+  c2:	b3 07       	cpc	r27, r19
+  c4:	e1 f7       	brne	.-8      	; 0xbe <__do_clear_bss>
+  c6:	e3 38       	cpi	r30, 0x83	; 131
+  c8:	f4 07       	cpc	r31, r20
+  ca:	31 f7       	brne	.-52     	; 0x98 <__do_copy_data+0x8>
+  cc:	0e 94 8a 05 	call	0xb14	; 0xb14 <main>
+  d0:	0c 94 6a 00 	jmp	0xd4	; 0xd4 <_exit>
+
+000000d4 <_exit>:
+  d4:	f8 94       	cli
+
+000000d6 <__stop_program>:
+  d6:	ff cf       	rjmp	.-2      	; 0xd6 <__stop_program>
+
+Disassembly of section .text:
+
+00001228 <__bad_interrupt>:
+    1228:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+Disassembly of section .text._delay_s:
+
+0000109c <_delay_s>:
+#endif
+//#define _delay_us delay_us
+//#define _delay_ms delay_ms
+// Declare your global variables here
+
+void _delay_s(int s) {
+    109c:	bc 01       	movw	r22, r24
+	int i;
+	for (i = 1; i <= 20*s; i++) {
+    109e:	21 e0       	ldi	r18, 0x01	; 1
+    10a0:	30 e0       	ldi	r19, 0x00	; 0
+    10a2:	0b c0       	rjmp	.+22     	; 0x10ba <_delay_s+0x1e>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    10a4:	4f e3       	ldi	r20, 0x3F	; 63
+    10a6:	8d e0       	ldi	r24, 0x0D	; 13
+    10a8:	93 e0       	ldi	r25, 0x03	; 3
+    10aa:	41 50       	subi	r20, 0x01	; 1
+    10ac:	80 40       	sbci	r24, 0x00	; 0
+    10ae:	90 40       	sbci	r25, 0x00	; 0
+    10b0:	e1 f7       	brne	.-8      	; 0x10aa <_delay_s+0xe>
+    10b2:	00 c0       	rjmp	.+0      	; 0x10b4 <_delay_s+0x18>
+    10b4:	00 00       	nop
+    10b6:	2f 5f       	subi	r18, 0xFF	; 255
+    10b8:	3f 4f       	sbci	r19, 0xFF	; 255
+    10ba:	94 e1       	ldi	r25, 0x14	; 20
+    10bc:	96 9f       	mul	r25, r22
+    10be:	a0 01       	movw	r20, r0
+    10c0:	97 9f       	mul	r25, r23
+    10c2:	50 0d       	add	r21, r0
+    10c4:	11 24       	eor	r1, r1
+    10c6:	42 17       	cp	r20, r18
+    10c8:	53 07       	cpc	r21, r19
+    10ca:	64 f7       	brge	.-40     	; 0x10a4 <_delay_s+0x8>
+		_delay_ms(1000);
+	}
+}
+    10cc:	08 95       	ret
+
+Disassembly of section .text.passOneA:
+
+0000116a <passOneA>:
+
+void passOneA(int port_value) {
+	PORTA |= port_value;
+    116a:	92 b1       	in	r25, 0x02	; 2
+    116c:	89 2b       	or	r24, r25
+    116e:	82 b9       	out	0x02, r24	; 2
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    1170:	85 e0       	ldi	r24, 0x05	; 5
+    1172:	8a 95       	dec	r24
+    1174:	f1 f7       	brne	.-4      	; 0x1172 <passOneA+0x8>
+    1176:	00 00       	nop
+    _delay_us(_T1H);
+    PORTA = 0;
+    1178:	12 b8       	out	0x02, r1	; 2
+    117a:	82 e0       	ldi	r24, 0x02	; 2
+    117c:	8a 95       	dec	r24
+    117e:	f1 f7       	brne	.-4      	; 0x117c <passOneA+0x12>
+    1180:	00 00       	nop
+    1182:	08 95       	ret
+
+Disassembly of section .text.passOneC:
+
+00001184 <passOneC>:
+    _delay_us(_T1L);
+}
+
+void passOneC(int port_value) {
+    PORTC |= port_value;
+    1184:	98 b1       	in	r25, 0x08	; 8
+    1186:	89 2b       	or	r24, r25
+    1188:	88 b9       	out	0x08, r24	; 8
+    118a:	85 e0       	ldi	r24, 0x05	; 5
+    118c:	8a 95       	dec	r24
+    118e:	f1 f7       	brne	.-4      	; 0x118c <passOneC+0x8>
+    1190:	00 00       	nop
+    _delay_us(_T1H);
+    PORTC = 0;
+    1192:	18 b8       	out	0x08, r1	; 8
+    1194:	82 e0       	ldi	r24, 0x02	; 2
+    1196:	8a 95       	dec	r24
+    1198:	f1 f7       	brne	.-4      	; 0x1196 <passOneC+0x12>
+    119a:	00 00       	nop
+    119c:	08 95       	ret
+
+Disassembly of section .text.passZeroA:
+
+0000119e <passZeroA>:
+    _delay_us(_T1L);
+}
+
+void passZeroA(int port_value) {
+    PORTA |= port_value;
+    119e:	92 b1       	in	r25, 0x02	; 2
+    11a0:	89 2b       	or	r24, r25
+    11a2:	82 b9       	out	0x02, r24	; 2
+    11a4:	82 e0       	ldi	r24, 0x02	; 2
+    11a6:	8a 95       	dec	r24
+    11a8:	f1 f7       	brne	.-4      	; 0x11a6 <passZeroA+0x8>
+    11aa:	00 c0       	rjmp	.+0      	; 0x11ac <passZeroA+0xe>
+    _delay_us(_T0H);
+    PORTA = 0;
+    11ac:	12 b8       	out	0x02, r1	; 2
+    11ae:	85 e0       	ldi	r24, 0x05	; 5
+    11b0:	8a 95       	dec	r24
+    11b2:	f1 f7       	brne	.-4      	; 0x11b0 <passZeroA+0x12>
+    11b4:	00 c0       	rjmp	.+0      	; 0x11b6 <passZeroA+0x18>
+    11b6:	08 95       	ret
+
+Disassembly of section .text.passZeroC:
+
+000011b8 <passZeroC>:
+    _delay_us(_T0L);
+}
+
+void passZeroC(int port_value) {
+    PORTC |= port_value;
+    11b8:	98 b1       	in	r25, 0x08	; 8
+    11ba:	89 2b       	or	r24, r25
+    11bc:	88 b9       	out	0x08, r24	; 8
+    11be:	82 e0       	ldi	r24, 0x02	; 2
+    11c0:	8a 95       	dec	r24
+    11c2:	f1 f7       	brne	.-4      	; 0x11c0 <passZeroC+0x8>
+    11c4:	00 c0       	rjmp	.+0      	; 0x11c6 <passZeroC+0xe>
+    _delay_us(_T0H);
+    PORTC = 0;
+    11c6:	18 b8       	out	0x08, r1	; 8
+    11c8:	85 e0       	ldi	r24, 0x05	; 5
+    11ca:	8a 95       	dec	r24
+    11cc:	f1 f7       	brne	.-4      	; 0x11ca <passZeroC+0x12>
+    11ce:	00 c0       	rjmp	.+0      	; 0x11d0 <passZeroC+0x18>
+    11d0:	08 95       	ret
+
+Disassembly of section .text.passResetA:
+
+000011e8 <passResetA>:
+    _delay_us(_T0L);
+}
+
+void passResetA() {
+    PORTA = 0;
+    11e8:	12 b8       	out	0x02, r1	; 2
+    11ea:	8e ef       	ldi	r24, 0xFE	; 254
+    11ec:	90 e0       	ldi	r25, 0x00	; 0
+    11ee:	01 97       	sbiw	r24, 0x01	; 1
+    11f0:	f1 f7       	brne	.-4      	; 0x11ee <passResetA+0x6>
+    11f2:	00 c0       	rjmp	.+0      	; 0x11f4 <passResetA+0xc>
+    11f4:	00 00       	nop
+    11f6:	08 95       	ret
+
+Disassembly of section .text.passResetC:
+
+000011f8 <passResetC>:
+    _delay_us(1020);
+}
+
+void passResetC() {
+    PORTC = 0;
+    11f8:	18 b8       	out	0x08, r1	; 8
+    11fa:	8e ef       	ldi	r24, 0xFE	; 254
+    11fc:	90 e0       	ldi	r25, 0x00	; 0
+    11fe:	01 97       	sbiw	r24, 0x01	; 1
+    1200:	f1 f7       	brne	.-4      	; 0x11fe <passResetC+0x6>
+    1202:	00 c0       	rjmp	.+0      	; 0x1204 <passResetC+0xc>
+    1204:	00 00       	nop
+    1206:	08 95       	ret
+
+Disassembly of section .text.passBar:
+
+00000f36 <passBar>:
+    _delay_us(1020);
+}
+
+void passBar(int8_t bits[], int8_t bar) {
+ f36:	ff 92       	push	r15
+ f38:	0f 93       	push	r16
+ f3a:	1f 93       	push	r17
+ f3c:	cf 93       	push	r28
+ f3e:	df 93       	push	r29
+ f40:	8c 01       	movw	r16, r24
+    int i;
+    int8_t port_value;
+    if (bar < 8) {
+ f42:	68 30       	cpi	r22, 0x08	; 8
+ f44:	1c f5       	brge	.+70     	; 0xf8c <passBar+0x56>
+        port_value = 1<<bar;
+ f46:	81 e0       	ldi	r24, 0x01	; 1
+ f48:	f8 2e       	mov	r15, r24
+ f4a:	01 c0       	rjmp	.+2      	; 0xf4e <passBar+0x18>
+ f4c:	ff 0c       	add	r15, r15
+ f4e:	6a 95       	dec	r22
+ f50:	ea f7       	brpl	.-6      	; 0xf4c <passBar+0x16>
+        for (i = 0; i < 144; i++) {
+ f52:	c0 e0       	ldi	r28, 0x00	; 0
+ f54:	d0 e0       	ldi	r29, 0x00	; 0
+ f56:	14 c0       	rjmp	.+40     	; 0xf80 <passBar+0x4a>
+            switch (bits[i]) {
+ f58:	f8 01       	movw	r30, r16
+ f5a:	ec 0f       	add	r30, r28
+ f5c:	fd 1f       	adc	r31, r29
+ f5e:	80 81       	ld	r24, Z
+ f60:	81 30       	cpi	r24, 0x01	; 1
+ f62:	39 f4       	brne	.+14     	; 0xf72 <passBar+0x3c>
+                case 1:
+                passOneA(port_value);
+ f64:	8f 2d       	mov	r24, r15
+ f66:	0f 2c       	mov	r0, r15
+ f68:	00 0c       	add	r0, r0
+ f6a:	99 0b       	sbc	r25, r25
+ f6c:	0e 94 b5 08 	call	0x116a	; 0x116a <passOneA>
+                break;
+ f70:	06 c0       	rjmp	.+12     	; 0xf7e <passBar+0x48>
+                default:
+                passZeroA(port_value);
+ f72:	8f 2d       	mov	r24, r15
+ f74:	0f 2c       	mov	r0, r15
+ f76:	00 0c       	add	r0, r0
+ f78:	99 0b       	sbc	r25, r25
+ f7a:	0e 94 cf 08 	call	0x119e	; 0x119e <passZeroA>
+void passBar(int8_t bits[], int8_t bar) {
+    int i;
+    int8_t port_value;
+    if (bar < 8) {
+        port_value = 1<<bar;
+        for (i = 0; i < 144; i++) {
+ f7e:	21 96       	adiw	r28, 0x01	; 1
+ f80:	c0 39       	cpi	r28, 0x90	; 144
+ f82:	d1 05       	cpc	r29, r1
+ f84:	4c f3       	brlt	.-46     	; 0xf58 <passBar+0x22>
+                break;
+                default:
+                passZeroA(port_value);
+            }
+        }
+        passResetA();
+ f86:	0e 94 f4 08 	call	0x11e8	; 0x11e8 <passResetA>
+ f8a:	23 c0       	rjmp	.+70     	; 0xfd2 <passBar+0x9c>
+    }
+    else {
+        bar -= 8;
+ f8c:	68 50       	subi	r22, 0x08	; 8
+        port_value = 1<<bar;
+ f8e:	81 e0       	ldi	r24, 0x01	; 1
+ f90:	f8 2e       	mov	r15, r24
+ f92:	01 c0       	rjmp	.+2      	; 0xf96 <passBar+0x60>
+ f94:	ff 0c       	add	r15, r15
+ f96:	6a 95       	dec	r22
+ f98:	ea f7       	brpl	.-6      	; 0xf94 <passBar+0x5e>
+        for (i = 0; i < 144; i++) {
+ f9a:	c0 e0       	ldi	r28, 0x00	; 0
+ f9c:	d0 e0       	ldi	r29, 0x00	; 0
+ f9e:	14 c0       	rjmp	.+40     	; 0xfc8 <passBar+0x92>
+            switch (bits[i]) {
+ fa0:	f8 01       	movw	r30, r16
+ fa2:	ec 0f       	add	r30, r28
+ fa4:	fd 1f       	adc	r31, r29
+ fa6:	80 81       	ld	r24, Z
+ fa8:	81 30       	cpi	r24, 0x01	; 1
+ faa:	39 f4       	brne	.+14     	; 0xfba <passBar+0x84>
+                case 1:
+                passOneC(port_value);
+ fac:	8f 2d       	mov	r24, r15
+ fae:	0f 2c       	mov	r0, r15
+ fb0:	00 0c       	add	r0, r0
+ fb2:	99 0b       	sbc	r25, r25
+ fb4:	0e 94 c2 08 	call	0x1184	; 0x1184 <passOneC>
+                break;
+ fb8:	06 c0       	rjmp	.+12     	; 0xfc6 <passBar+0x90>
+                default:
+                passZeroC(port_value);
+ fba:	8f 2d       	mov	r24, r15
+ fbc:	0f 2c       	mov	r0, r15
+ fbe:	00 0c       	add	r0, r0
+ fc0:	99 0b       	sbc	r25, r25
+ fc2:	0e 94 dc 08 	call	0x11b8	; 0x11b8 <passZeroC>
+        passResetA();
+    }
+    else {
+        bar -= 8;
+        port_value = 1<<bar;
+        for (i = 0; i < 144; i++) {
+ fc6:	21 96       	adiw	r28, 0x01	; 1
+ fc8:	c0 39       	cpi	r28, 0x90	; 144
+ fca:	d1 05       	cpc	r29, r1
+ fcc:	4c f3       	brlt	.-46     	; 0xfa0 <passBar+0x6a>
+                break;
+                default:
+                passZeroC(port_value);
+            }
+        }
+        passResetC();
+ fce:	0e 94 fc 08 	call	0x11f8	; 0x11f8 <passResetC>
+    }
+}
+ fd2:	df 91       	pop	r29
+ fd4:	cf 91       	pop	r28
+ fd6:	1f 91       	pop	r17
+ fd8:	0f 91       	pop	r16
+ fda:	ff 90       	pop	r15
+ fdc:	08 95       	ret
+
+Disassembly of section .text.getBitsFromCube:
+
+00000742 <getBitsFromCube>:
+
+void getBitsFromCube(int8_t bar, int8_t cube[], int8_t bits[]) {
+ 742:	af 92       	push	r10
+ 744:	bf 92       	push	r11
+ 746:	cf 92       	push	r12
+ 748:	df 92       	push	r13
+ 74a:	ef 92       	push	r14
+ 74c:	ff 92       	push	r15
+ 74e:	0f 93       	push	r16
+ 750:	1f 93       	push	r17
+ 752:	cf 93       	push	r28
+ 754:	df 93       	push	r29
+    int i;
+    int j;
+    for (i = bar*6; i <= bar*6+5; i++) {
+ 756:	08 2f       	mov	r16, r24
+ 758:	88 0f       	add	r24, r24
+ 75a:	11 0b       	sbc	r17, r17
+ 75c:	e8 01       	movw	r28, r16
+ 75e:	cc 0f       	add	r28, r28
+ 760:	dd 1f       	adc	r29, r29
+ 762:	c0 0f       	add	r28, r16
+ 764:	d1 1f       	adc	r29, r17
+ 766:	cc 0f       	add	r28, r28
+ 768:	dd 1f       	adc	r29, r29
+ 76a:	6e 01       	movw	r12, r28
+ 76c:	5e 01       	movw	r10, r28
+ 76e:	c0 c1       	rjmp	.+896    	; 0xaf0 <getBitsFromCube+0x3ae>
+        if (cube[i] == 0) {
+ 770:	fb 01       	movw	r30, r22
+ 772:	ea 0d       	add	r30, r10
+ 774:	fb 1d       	adc	r31, r11
+ 776:	20 81       	ld	r18, Z
+ 778:	21 11       	cpse	r18, r1
+ 77a:	47 c0       	rjmp	.+142    	; 0x80a <getBitsFromCube+0xc8>
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 77c:	ea ef       	ldi	r30, 0xFA	; 250
+ 77e:	2e 2f       	mov	r18, r30
+ 780:	20 03       	mulsu	r18, r16
+ 782:	c0 01       	movw	r24, r0
+ 784:	21 9f       	mul	r18, r17
+ 786:	90 0d       	add	r25, r0
+ 788:	11 24       	eor	r1, r1
+ 78a:	9c 01       	movw	r18, r24
+ 78c:	2a 0d       	add	r18, r10
+ 78e:	3b 1d       	adc	r19, r11
+ 790:	f9 01       	movw	r30, r18
+ 792:	ee 0f       	add	r30, r30
+ 794:	ff 1f       	adc	r31, r31
+ 796:	2e 0f       	add	r18, r30
+ 798:	3f 1f       	adc	r19, r31
+ 79a:	22 0f       	add	r18, r18
+ 79c:	33 1f       	adc	r19, r19
+ 79e:	22 0f       	add	r18, r18
+ 7a0:	33 1f       	adc	r19, r19
+ 7a2:	22 0f       	add	r18, r18
+ 7a4:	33 1f       	adc	r19, r19
+ 7a6:	d9 01       	movw	r26, r18
+ 7a8:	f9 01       	movw	r30, r18
+ 7aa:	07 c0       	rjmp	.+14     	; 0x7ba <getBitsFromCube+0x78>
+                bits[j] = 1;
+ 7ac:	7a 01       	movw	r14, r20
+ 7ae:	ee 0e       	add	r14, r30
+ 7b0:	ff 1e       	adc	r15, r31
+ 7b2:	81 e0       	ldi	r24, 0x01	; 1
+ 7b4:	e7 01       	movw	r28, r14
+ 7b6:	88 83       	st	Y, r24
+void getBitsFromCube(int8_t bar, int8_t cube[], int8_t bits[]) {
+    int i;
+    int j;
+    for (i = bar*6; i <= bar*6+5; i++) {
+        if (cube[i] == 0) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 7b8:	31 96       	adiw	r30, 0x01	; 1
+ 7ba:	7d 01       	movw	r14, r26
+ 7bc:	d7 e0       	ldi	r29, 0x07	; 7
+ 7be:	ed 0e       	add	r14, r29
+ 7c0:	f1 1c       	adc	r15, r1
+ 7c2:	ee 16       	cp	r14, r30
+ 7c4:	ff 06       	cpc	r15, r31
+ 7c6:	94 f7       	brge	.-28     	; 0x7ac <getBitsFromCube+0x6a>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 7c8:	f9 01       	movw	r30, r18
+ 7ca:	38 96       	adiw	r30, 0x08	; 8
+ 7cc:	07 c0       	rjmp	.+14     	; 0x7dc <getBitsFromCube+0x9a>
+                bits[j] = 1;
+ 7ce:	7a 01       	movw	r14, r20
+ 7d0:	ee 0e       	add	r14, r30
+ 7d2:	ff 1e       	adc	r15, r31
+ 7d4:	81 e0       	ldi	r24, 0x01	; 1
+ 7d6:	e7 01       	movw	r28, r14
+ 7d8:	88 83       	st	Y, r24
+    for (i = bar*6; i <= bar*6+5; i++) {
+        if (cube[i] == 0) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 7da:	31 96       	adiw	r30, 0x01	; 1
+ 7dc:	7d 01       	movw	r14, r26
+ 7de:	df e0       	ldi	r29, 0x0F	; 15
+ 7e0:	ed 0e       	add	r14, r29
+ 7e2:	f1 1c       	adc	r15, r1
+ 7e4:	ee 16       	cp	r14, r30
+ 7e6:	ff 06       	cpc	r15, r31
+ 7e8:	94 f7       	brge	.-28     	; 0x7ce <getBitsFromCube+0x8c>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 7ea:	20 5f       	subi	r18, 0xF0	; 240
+ 7ec:	3f 4f       	sbci	r19, 0xFF	; 255
+ 7ee:	07 c0       	rjmp	.+14     	; 0x7fe <getBitsFromCube+0xbc>
+                bits[j] = 1;
+ 7f0:	fa 01       	movw	r30, r20
+ 7f2:	e2 0f       	add	r30, r18
+ 7f4:	f3 1f       	adc	r31, r19
+ 7f6:	81 e0       	ldi	r24, 0x01	; 1
+ 7f8:	80 83       	st	Z, r24
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 7fa:	2f 5f       	subi	r18, 0xFF	; 255
+ 7fc:	3f 4f       	sbci	r19, 0xFF	; 255
+ 7fe:	fd 01       	movw	r30, r26
+ 800:	77 96       	adiw	r30, 0x17	; 23
+ 802:	e2 17       	cp	r30, r18
+ 804:	f3 07       	cpc	r31, r19
+ 806:	a4 f7       	brge	.-24     	; 0x7f0 <getBitsFromCube+0xae>
+ 808:	70 c1       	rjmp	.+736    	; 0xaea <getBitsFromCube+0x3a8>
+                bits[j] = 1;
+            }
+        }
+        else if (cube[i] == 1) {
+ 80a:	21 30       	cpi	r18, 0x01	; 1
+ 80c:	09 f0       	breq	.+2      	; 0x810 <getBitsFromCube+0xce>
+ 80e:	48 c0       	rjmp	.+144    	; 0x8a0 <getBitsFromCube+0x15e>
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 810:	ea ef       	ldi	r30, 0xFA	; 250
+ 812:	2e 2f       	mov	r18, r30
+ 814:	20 03       	mulsu	r18, r16
+ 816:	c0 01       	movw	r24, r0
+ 818:	21 9f       	mul	r18, r17
+ 81a:	90 0d       	add	r25, r0
+ 81c:	11 24       	eor	r1, r1
+ 81e:	9c 01       	movw	r18, r24
+ 820:	2a 0d       	add	r18, r10
+ 822:	3b 1d       	adc	r19, r11
+ 824:	f9 01       	movw	r30, r18
+ 826:	ee 0f       	add	r30, r30
+ 828:	ff 1f       	adc	r31, r31
+ 82a:	2e 0f       	add	r18, r30
+ 82c:	3f 1f       	adc	r19, r31
+ 82e:	c9 01       	movw	r24, r18
+ 830:	88 0f       	add	r24, r24
+ 832:	99 1f       	adc	r25, r25
+ 834:	88 0f       	add	r24, r24
+ 836:	99 1f       	adc	r25, r25
+ 838:	88 0f       	add	r24, r24
+ 83a:	99 1f       	adc	r25, r25
+ 83c:	dc 01       	movw	r26, r24
+ 83e:	fc 01       	movw	r30, r24
+ 840:	07 c0       	rjmp	.+14     	; 0x850 <getBitsFromCube+0x10e>
+                bits[j] = 1;
+ 842:	7a 01       	movw	r14, r20
+ 844:	ee 0e       	add	r14, r30
+ 846:	ff 1e       	adc	r15, r31
+ 848:	21 e0       	ldi	r18, 0x01	; 1
+ 84a:	e7 01       	movw	r28, r14
+ 84c:	28 83       	st	Y, r18
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 1;
+            }
+        }
+        else if (cube[i] == 1) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 84e:	31 96       	adiw	r30, 0x01	; 1
+ 850:	7d 01       	movw	r14, r26
+ 852:	d7 e0       	ldi	r29, 0x07	; 7
+ 854:	ed 0e       	add	r14, r29
+ 856:	f1 1c       	adc	r15, r1
+ 858:	ee 16       	cp	r14, r30
+ 85a:	ff 06       	cpc	r15, r31
+ 85c:	94 f7       	brge	.-28     	; 0x842 <getBitsFromCube+0x100>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 85e:	fc 01       	movw	r30, r24
+ 860:	38 96       	adiw	r30, 0x08	; 8
+ 862:	07 c0       	rjmp	.+14     	; 0x872 <getBitsFromCube+0x130>
+                bits[j] = 1;
+ 864:	7a 01       	movw	r14, r20
+ 866:	ee 0e       	add	r14, r30
+ 868:	ff 1e       	adc	r15, r31
+ 86a:	21 e0       	ldi	r18, 0x01	; 1
+ 86c:	e7 01       	movw	r28, r14
+ 86e:	28 83       	st	Y, r18
+        }
+        else if (cube[i] == 1) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 870:	31 96       	adiw	r30, 0x01	; 1
+ 872:	7d 01       	movw	r14, r26
+ 874:	df e0       	ldi	r29, 0x0F	; 15
+ 876:	ed 0e       	add	r14, r29
+ 878:	f1 1c       	adc	r15, r1
+ 87a:	ee 16       	cp	r14, r30
+ 87c:	ff 06       	cpc	r15, r31
+ 87e:	94 f7       	brge	.-28     	; 0x864 <getBitsFromCube+0x122>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 880:	9c 01       	movw	r18, r24
+ 882:	20 5f       	subi	r18, 0xF0	; 240
+ 884:	3f 4f       	sbci	r19, 0xFF	; 255
+ 886:	06 c0       	rjmp	.+12     	; 0x894 <getBitsFromCube+0x152>
+                bits[j] = 0;
+ 888:	fa 01       	movw	r30, r20
+ 88a:	e2 0f       	add	r30, r18
+ 88c:	f3 1f       	adc	r31, r19
+ 88e:	10 82       	st	Z, r1
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 890:	2f 5f       	subi	r18, 0xFF	; 255
+ 892:	3f 4f       	sbci	r19, 0xFF	; 255
+ 894:	fd 01       	movw	r30, r26
+ 896:	77 96       	adiw	r30, 0x17	; 23
+ 898:	e2 17       	cp	r30, r18
+ 89a:	f3 07       	cpc	r31, r19
+ 89c:	ac f7       	brge	.-22     	; 0x888 <getBitsFromCube+0x146>
+ 89e:	25 c1       	rjmp	.+586    	; 0xaea <getBitsFromCube+0x3a8>
+                bits[j] = 0;
+            }
+        }
+        else if (cube[i] == 2) {
+ 8a0:	22 30       	cpi	r18, 0x02	; 2
+ 8a2:	09 f0       	breq	.+2      	; 0x8a6 <getBitsFromCube+0x164>
+ 8a4:	49 c0       	rjmp	.+146    	; 0x938 <getBitsFromCube+0x1f6>
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 8a6:	ea ef       	ldi	r30, 0xFA	; 250
+ 8a8:	2e 2f       	mov	r18, r30
+ 8aa:	20 03       	mulsu	r18, r16
+ 8ac:	c0 01       	movw	r24, r0
+ 8ae:	21 9f       	mul	r18, r17
+ 8b0:	90 0d       	add	r25, r0
+ 8b2:	11 24       	eor	r1, r1
+ 8b4:	9c 01       	movw	r18, r24
+ 8b6:	2a 0d       	add	r18, r10
+ 8b8:	3b 1d       	adc	r19, r11
+ 8ba:	f9 01       	movw	r30, r18
+ 8bc:	ee 0f       	add	r30, r30
+ 8be:	ff 1f       	adc	r31, r31
+ 8c0:	2e 0f       	add	r18, r30
+ 8c2:	3f 1f       	adc	r19, r31
+ 8c4:	c9 01       	movw	r24, r18
+ 8c6:	88 0f       	add	r24, r24
+ 8c8:	99 1f       	adc	r25, r25
+ 8ca:	88 0f       	add	r24, r24
+ 8cc:	99 1f       	adc	r25, r25
+ 8ce:	88 0f       	add	r24, r24
+ 8d0:	99 1f       	adc	r25, r25
+ 8d2:	dc 01       	movw	r26, r24
+ 8d4:	fc 01       	movw	r30, r24
+ 8d6:	06 c0       	rjmp	.+12     	; 0x8e4 <getBitsFromCube+0x1a2>
+                bits[j] = 0;
+ 8d8:	7a 01       	movw	r14, r20
+ 8da:	ee 0e       	add	r14, r30
+ 8dc:	ff 1e       	adc	r15, r31
+ 8de:	e7 01       	movw	r28, r14
+ 8e0:	18 82       	st	Y, r1
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 0;
+            }
+        }
+        else if (cube[i] == 2) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 8e2:	31 96       	adiw	r30, 0x01	; 1
+ 8e4:	7d 01       	movw	r14, r26
+ 8e6:	d7 e0       	ldi	r29, 0x07	; 7
+ 8e8:	ed 0e       	add	r14, r29
+ 8ea:	f1 1c       	adc	r15, r1
+ 8ec:	ee 16       	cp	r14, r30
+ 8ee:	ff 06       	cpc	r15, r31
+ 8f0:	9c f7       	brge	.-26     	; 0x8d8 <getBitsFromCube+0x196>
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 8f2:	fc 01       	movw	r30, r24
+ 8f4:	38 96       	adiw	r30, 0x08	; 8
+ 8f6:	07 c0       	rjmp	.+14     	; 0x906 <getBitsFromCube+0x1c4>
+                bits[j] = 1;
+ 8f8:	7a 01       	movw	r14, r20
+ 8fa:	ee 0e       	add	r14, r30
+ 8fc:	ff 1e       	adc	r15, r31
+ 8fe:	21 e0       	ldi	r18, 0x01	; 1
+ 900:	e7 01       	movw	r28, r14
+ 902:	28 83       	st	Y, r18
+        }
+        else if (cube[i] == 2) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 904:	31 96       	adiw	r30, 0x01	; 1
+ 906:	7d 01       	movw	r14, r26
+ 908:	df e0       	ldi	r29, 0x0F	; 15
+ 90a:	ed 0e       	add	r14, r29
+ 90c:	f1 1c       	adc	r15, r1
+ 90e:	ee 16       	cp	r14, r30
+ 910:	ff 06       	cpc	r15, r31
+ 912:	94 f7       	brge	.-28     	; 0x8f8 <getBitsFromCube+0x1b6>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 914:	9c 01       	movw	r18, r24
+ 916:	20 5f       	subi	r18, 0xF0	; 240
+ 918:	3f 4f       	sbci	r19, 0xFF	; 255
+ 91a:	08 c0       	rjmp	.+16     	; 0x92c <getBitsFromCube+0x1ea>
+                bits[j] = 1;
+ 91c:	fa 01       	movw	r30, r20
+ 91e:	e2 0f       	add	r30, r18
+ 920:	f3 1f       	adc	r31, r19
+ 922:	ff 24       	eor	r15, r15
+ 924:	f3 94       	inc	r15
+ 926:	f0 82       	st	Z, r15
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 928:	2f 5f       	subi	r18, 0xFF	; 255
+ 92a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 92c:	fd 01       	movw	r30, r26
+ 92e:	77 96       	adiw	r30, 0x17	; 23
+ 930:	e2 17       	cp	r30, r18
+ 932:	f3 07       	cpc	r31, r19
+ 934:	9c f7       	brge	.-26     	; 0x91c <getBitsFromCube+0x1da>
+ 936:	d9 c0       	rjmp	.+434    	; 0xaea <getBitsFromCube+0x3a8>
+                bits[j] = 1;
+            }
+        }
+        else if (cube[i] == 3) {
+ 938:	23 30       	cpi	r18, 0x03	; 3
+ 93a:	09 f0       	breq	.+2      	; 0x93e <getBitsFromCube+0x1fc>
+ 93c:	47 c0       	rjmp	.+142    	; 0x9cc <getBitsFromCube+0x28a>
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 93e:	ea ef       	ldi	r30, 0xFA	; 250
+ 940:	2e 2f       	mov	r18, r30
+ 942:	20 03       	mulsu	r18, r16
+ 944:	c0 01       	movw	r24, r0
+ 946:	21 9f       	mul	r18, r17
+ 948:	90 0d       	add	r25, r0
+ 94a:	11 24       	eor	r1, r1
+ 94c:	9c 01       	movw	r18, r24
+ 94e:	2a 0d       	add	r18, r10
+ 950:	3b 1d       	adc	r19, r11
+ 952:	f9 01       	movw	r30, r18
+ 954:	ee 0f       	add	r30, r30
+ 956:	ff 1f       	adc	r31, r31
+ 958:	2e 0f       	add	r18, r30
+ 95a:	3f 1f       	adc	r19, r31
+ 95c:	c9 01       	movw	r24, r18
+ 95e:	88 0f       	add	r24, r24
+ 960:	99 1f       	adc	r25, r25
+ 962:	88 0f       	add	r24, r24
+ 964:	99 1f       	adc	r25, r25
+ 966:	88 0f       	add	r24, r24
+ 968:	99 1f       	adc	r25, r25
+ 96a:	dc 01       	movw	r26, r24
+ 96c:	fc 01       	movw	r30, r24
+ 96e:	06 c0       	rjmp	.+12     	; 0x97c <getBitsFromCube+0x23a>
+                bits[j] = 0;
+ 970:	7a 01       	movw	r14, r20
+ 972:	ee 0e       	add	r14, r30
+ 974:	ff 1e       	adc	r15, r31
+ 976:	e7 01       	movw	r28, r14
+ 978:	18 82       	st	Y, r1
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 1;
+            }
+        }
+        else if (cube[i] == 3) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 97a:	31 96       	adiw	r30, 0x01	; 1
+ 97c:	7d 01       	movw	r14, r26
+ 97e:	d7 e0       	ldi	r29, 0x07	; 7
+ 980:	ed 0e       	add	r14, r29
+ 982:	f1 1c       	adc	r15, r1
+ 984:	ee 16       	cp	r14, r30
+ 986:	ff 06       	cpc	r15, r31
+ 988:	9c f7       	brge	.-26     	; 0x970 <getBitsFromCube+0x22e>
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 98a:	fc 01       	movw	r30, r24
+ 98c:	38 96       	adiw	r30, 0x08	; 8
+ 98e:	07 c0       	rjmp	.+14     	; 0x99e <getBitsFromCube+0x25c>
+                bits[j] = 1;
+ 990:	7a 01       	movw	r14, r20
+ 992:	ee 0e       	add	r14, r30
+ 994:	ff 1e       	adc	r15, r31
+ 996:	21 e0       	ldi	r18, 0x01	; 1
+ 998:	e7 01       	movw	r28, r14
+ 99a:	28 83       	st	Y, r18
+        }
+        else if (cube[i] == 3) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ 99c:	31 96       	adiw	r30, 0x01	; 1
+ 99e:	7d 01       	movw	r14, r26
+ 9a0:	df e0       	ldi	r29, 0x0F	; 15
+ 9a2:	ed 0e       	add	r14, r29
+ 9a4:	f1 1c       	adc	r15, r1
+ 9a6:	ee 16       	cp	r14, r30
+ 9a8:	ff 06       	cpc	r15, r31
+ 9aa:	94 f7       	brge	.-28     	; 0x990 <getBitsFromCube+0x24e>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 9ac:	9c 01       	movw	r18, r24
+ 9ae:	20 5f       	subi	r18, 0xF0	; 240
+ 9b0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 9b2:	06 c0       	rjmp	.+12     	; 0x9c0 <getBitsFromCube+0x27e>
+                bits[j] = 0;
+ 9b4:	fa 01       	movw	r30, r20
+ 9b6:	e2 0f       	add	r30, r18
+ 9b8:	f3 1f       	adc	r31, r19
+ 9ba:	10 82       	st	Z, r1
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ 9bc:	2f 5f       	subi	r18, 0xFF	; 255
+ 9be:	3f 4f       	sbci	r19, 0xFF	; 255
+ 9c0:	fd 01       	movw	r30, r26
+ 9c2:	77 96       	adiw	r30, 0x17	; 23
+ 9c4:	e2 17       	cp	r30, r18
+ 9c6:	f3 07       	cpc	r31, r19
+ 9c8:	ac f7       	brge	.-22     	; 0x9b4 <getBitsFromCube+0x272>
+ 9ca:	8f c0       	rjmp	.+286    	; 0xaea <getBitsFromCube+0x3a8>
+                bits[j] = 0;
+            }
+        }
+        else if (cube[i] == 4) {
+ 9cc:	24 30       	cpi	r18, 0x04	; 4
+ 9ce:	09 f0       	breq	.+2      	; 0x9d2 <getBitsFromCube+0x290>
+ 9d0:	46 c0       	rjmp	.+140    	; 0xa5e <getBitsFromCube+0x31c>
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ 9d2:	ea ef       	ldi	r30, 0xFA	; 250
+ 9d4:	2e 2f       	mov	r18, r30
+ 9d6:	20 03       	mulsu	r18, r16
+ 9d8:	c0 01       	movw	r24, r0
+ 9da:	21 9f       	mul	r18, r17
+ 9dc:	90 0d       	add	r25, r0
+ 9de:	11 24       	eor	r1, r1
+ 9e0:	9c 01       	movw	r18, r24
+ 9e2:	2a 0d       	add	r18, r10
+ 9e4:	3b 1d       	adc	r19, r11
+ 9e6:	f9 01       	movw	r30, r18
+ 9e8:	ee 0f       	add	r30, r30
+ 9ea:	ff 1f       	adc	r31, r31
+ 9ec:	2e 0f       	add	r18, r30
+ 9ee:	3f 1f       	adc	r19, r31
+ 9f0:	22 0f       	add	r18, r18
+ 9f2:	33 1f       	adc	r19, r19
+ 9f4:	22 0f       	add	r18, r18
+ 9f6:	33 1f       	adc	r19, r19
+ 9f8:	22 0f       	add	r18, r18
+ 9fa:	33 1f       	adc	r19, r19
+ 9fc:	d9 01       	movw	r26, r18
+ 9fe:	f9 01       	movw	r30, r18
+ a00:	06 c0       	rjmp	.+12     	; 0xa0e <getBitsFromCube+0x2cc>
+                bits[j] = 0;
+ a02:	7a 01       	movw	r14, r20
+ a04:	ee 0e       	add	r14, r30
+ a06:	ff 1e       	adc	r15, r31
+ a08:	e7 01       	movw	r28, r14
+ a0a:	18 82       	st	Y, r1
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 0;
+            }
+        }
+        else if (cube[i] == 4) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ a0c:	31 96       	adiw	r30, 0x01	; 1
+ a0e:	7d 01       	movw	r14, r26
+ a10:	d7 e0       	ldi	r29, 0x07	; 7
+ a12:	ed 0e       	add	r14, r29
+ a14:	f1 1c       	adc	r15, r1
+ a16:	ee 16       	cp	r14, r30
+ a18:	ff 06       	cpc	r15, r31
+ a1a:	9c f7       	brge	.-26     	; 0xa02 <getBitsFromCube+0x2c0>
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ a1c:	f9 01       	movw	r30, r18
+ a1e:	38 96       	adiw	r30, 0x08	; 8
+ a20:	06 c0       	rjmp	.+12     	; 0xa2e <getBitsFromCube+0x2ec>
+                bits[j] = 0;
+ a22:	7a 01       	movw	r14, r20
+ a24:	ee 0e       	add	r14, r30
+ a26:	ff 1e       	adc	r15, r31
+ a28:	e7 01       	movw	r28, r14
+ a2a:	18 82       	st	Y, r1
+        }
+        else if (cube[i] == 4) {
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ a2c:	31 96       	adiw	r30, 0x01	; 1
+ a2e:	7d 01       	movw	r14, r26
+ a30:	df e0       	ldi	r29, 0x0F	; 15
+ a32:	ed 0e       	add	r14, r29
+ a34:	f1 1c       	adc	r15, r1
+ a36:	ee 16       	cp	r14, r30
+ a38:	ff 06       	cpc	r15, r31
+ a3a:	9c f7       	brge	.-26     	; 0xa22 <getBitsFromCube+0x2e0>
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ a3c:	20 5f       	subi	r18, 0xF0	; 240
+ a3e:	3f 4f       	sbci	r19, 0xFF	; 255
+ a40:	08 c0       	rjmp	.+16     	; 0xa52 <getBitsFromCube+0x310>
+                bits[j] = 1;
+ a42:	fa 01       	movw	r30, r20
+ a44:	e2 0f       	add	r30, r18
+ a46:	f3 1f       	adc	r31, r19
+ a48:	ff 24       	eor	r15, r15
+ a4a:	f3 94       	inc	r15
+ a4c:	f0 82       	st	Z, r15
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ a4e:	2f 5f       	subi	r18, 0xFF	; 255
+ a50:	3f 4f       	sbci	r19, 0xFF	; 255
+ a52:	fd 01       	movw	r30, r26
+ a54:	77 96       	adiw	r30, 0x17	; 23
+ a56:	e2 17       	cp	r30, r18
+ a58:	f3 07       	cpc	r31, r19
+ a5a:	9c f7       	brge	.-26     	; 0xa42 <getBitsFromCube+0x300>
+ a5c:	46 c0       	rjmp	.+140    	; 0xaea <getBitsFromCube+0x3a8>
+                bits[j] = 1;
+            }
+        }
+        else{
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ a5e:	ea ef       	ldi	r30, 0xFA	; 250
+ a60:	2e 2f       	mov	r18, r30
+ a62:	20 03       	mulsu	r18, r16
+ a64:	c0 01       	movw	r24, r0
+ a66:	21 9f       	mul	r18, r17
+ a68:	90 0d       	add	r25, r0
+ a6a:	11 24       	eor	r1, r1
+ a6c:	9c 01       	movw	r18, r24
+ a6e:	2a 0d       	add	r18, r10
+ a70:	3b 1d       	adc	r19, r11
+ a72:	f9 01       	movw	r30, r18
+ a74:	ee 0f       	add	r30, r30
+ a76:	ff 1f       	adc	r31, r31
+ a78:	2e 0f       	add	r18, r30
+ a7a:	3f 1f       	adc	r19, r31
+ a7c:	c9 01       	movw	r24, r18
+ a7e:	88 0f       	add	r24, r24
+ a80:	99 1f       	adc	r25, r25
+ a82:	88 0f       	add	r24, r24
+ a84:	99 1f       	adc	r25, r25
+ a86:	88 0f       	add	r24, r24
+ a88:	99 1f       	adc	r25, r25
+ a8a:	dc 01       	movw	r26, r24
+ a8c:	fc 01       	movw	r30, r24
+ a8e:	07 c0       	rjmp	.+14     	; 0xa9e <getBitsFromCube+0x35c>
+                bits[j] = 1;
+ a90:	7a 01       	movw	r14, r20
+ a92:	ee 0e       	add	r14, r30
+ a94:	ff 1e       	adc	r15, r31
+ a96:	21 e0       	ldi	r18, 0x01	; 1
+ a98:	e7 01       	movw	r28, r14
+ a9a:	28 83       	st	Y, r18
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 1;
+            }
+        }
+        else{
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+ a9c:	31 96       	adiw	r30, 0x01	; 1
+ a9e:	7d 01       	movw	r14, r26
+ aa0:	d7 e0       	ldi	r29, 0x07	; 7
+ aa2:	ed 0e       	add	r14, r29
+ aa4:	f1 1c       	adc	r15, r1
+ aa6:	ee 16       	cp	r14, r30
+ aa8:	ff 06       	cpc	r15, r31
+ aaa:	94 f7       	brge	.-28     	; 0xa90 <getBitsFromCube+0x34e>
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ aac:	fc 01       	movw	r30, r24
+ aae:	38 96       	adiw	r30, 0x08	; 8
+ ab0:	06 c0       	rjmp	.+12     	; 0xabe <getBitsFromCube+0x37c>
+                bits[j] = 0;
+ ab2:	7a 01       	movw	r14, r20
+ ab4:	ee 0e       	add	r14, r30
+ ab6:	ff 1e       	adc	r15, r31
+ ab8:	e7 01       	movw	r28, r14
+ aba:	18 82       	st	Y, r1
+        }
+        else{
+            for (j = (i-bar*6)*24; j <= (i-bar*6)*24+7; j++) {
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+ abc:	31 96       	adiw	r30, 0x01	; 1
+ abe:	7d 01       	movw	r14, r26
+ ac0:	df e0       	ldi	r29, 0x0F	; 15
+ ac2:	ed 0e       	add	r14, r29
+ ac4:	f1 1c       	adc	r15, r1
+ ac6:	ee 16       	cp	r14, r30
+ ac8:	ff 06       	cpc	r15, r31
+ aca:	9c f7       	brge	.-26     	; 0xab2 <getBitsFromCube+0x370>
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ acc:	9c 01       	movw	r18, r24
+ ace:	20 5f       	subi	r18, 0xF0	; 240
+ ad0:	3f 4f       	sbci	r19, 0xFF	; 255
+ ad2:	06 c0       	rjmp	.+12     	; 0xae0 <getBitsFromCube+0x39e>
+                bits[j] = 0;
+ ad4:	fa 01       	movw	r30, r20
+ ad6:	e2 0f       	add	r30, r18
+ ad8:	f3 1f       	adc	r31, r19
+ ada:	10 82       	st	Z, r1
+                bits[j] = 1;
+            }
+            for (j = (i-bar*6)*24+8; j <= (i-bar*6)*24+7+8; j++) {
+                bits[j] = 0;
+            }
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+ adc:	2f 5f       	subi	r18, 0xFF	; 255
+ ade:	3f 4f       	sbci	r19, 0xFF	; 255
+ ae0:	fd 01       	movw	r30, r26
+ ae2:	77 96       	adiw	r30, 0x17	; 23
+ ae4:	e2 17       	cp	r30, r18
+ ae6:	f3 07       	cpc	r31, r19
+ ae8:	ac f7       	brge	.-22     	; 0xad4 <getBitsFromCube+0x392>
+}
+
+void getBitsFromCube(int8_t bar, int8_t cube[], int8_t bits[]) {
+    int i;
+    int j;
+    for (i = bar*6; i <= bar*6+5; i++) {
+ aea:	2f ef       	ldi	r18, 0xFF	; 255
+ aec:	a2 1a       	sub	r10, r18
+ aee:	b2 0a       	sbc	r11, r18
+ af0:	96 01       	movw	r18, r12
+ af2:	2b 5f       	subi	r18, 0xFB	; 251
+ af4:	3f 4f       	sbci	r19, 0xFF	; 255
+ af6:	2a 15       	cp	r18, r10
+ af8:	3b 05       	cpc	r19, r11
+ afa:	0c f0       	brlt	.+2      	; 0xafe <getBitsFromCube+0x3bc>
+ afc:	39 ce       	rjmp	.-910    	; 0x770 <getBitsFromCube+0x2e>
+            for (j = (i-bar*6)*24+16; j <= (i-bar*6)*24+7+16; j++) {
+                bits[j] = 0;
+            }
+        }
+    }
+}
+ afe:	df 91       	pop	r29
+ b00:	cf 91       	pop	r28
+ b02:	1f 91       	pop	r17
+ b04:	0f 91       	pop	r16
+ b06:	ff 90       	pop	r15
+ b08:	ef 90       	pop	r14
+ b0a:	df 90       	pop	r13
+ b0c:	cf 90       	pop	r12
+ b0e:	bf 90       	pop	r11
+ b10:	af 90       	pop	r10
+ b12:	08 95       	ret
+
+Disassembly of section .text.initCube:
+
+00000fde <initCube>:
+
+void initCube(int8_t cube[]) {
+     fde:	fc 01       	movw	r30, r24
+    cube[0] = 0;
+     fe0:	10 82       	st	Z, r1
+    cube[1] = 0;
+     fe2:	11 82       	std	Z+1, r1	; 0x01
+    cube[2] = 0;
+     fe4:	12 82       	std	Z+2, r1	; 0x02
+    cube[6] = 0;
+     fe6:	16 82       	std	Z+6, r1	; 0x06
+    cube[7] = 0;
+     fe8:	17 82       	std	Z+7, r1	; 0x07
+    cube[8] = 0;
+     fea:	10 86       	std	Z+8, r1	; 0x08
+    cube[12] = 0;
+     fec:	14 86       	std	Z+12, r1	; 0x0c
+    cube[13] = 0;
+     fee:	15 86       	std	Z+13, r1	; 0x0d
+    cube[14] = 0;
+     ff0:	16 86       	std	Z+14, r1	; 0x0e
+    cube[3] = 1;
+     ff2:	81 e0       	ldi	r24, 0x01	; 1
+     ff4:	83 83       	std	Z+3, r24	; 0x03
+    cube[4] = 1;
+     ff6:	84 83       	std	Z+4, r24	; 0x04
+    cube[5] = 1;
+     ff8:	85 83       	std	Z+5, r24	; 0x05
+    cube[9] = 1;
+     ffa:	81 87       	std	Z+9, r24	; 0x09
+    cube[10] = 1;
+     ffc:	82 87       	std	Z+10, r24	; 0x0a
+    cube[11] = 1;
+     ffe:	83 87       	std	Z+11, r24	; 0x0b
+    cube[15] = 1;
+    1000:	87 87       	std	Z+15, r24	; 0x0f
+    cube[16] = 1;
+    1002:	80 8b       	std	Z+16, r24	; 0x10
+    cube[17] = 1;
+    1004:	81 8b       	std	Z+17, r24	; 0x11
+    cube[18] = 2;
+    1006:	82 e0       	ldi	r24, 0x02	; 2
+    1008:	82 8b       	std	Z+18, r24	; 0x12
+    cube[19] = 2;
+    100a:	83 8b       	std	Z+19, r24	; 0x13
+    cube[20] = 2;
+    100c:	84 8b       	std	Z+20, r24	; 0x14
+    cube[24] = 2;
+    100e:	80 8f       	std	Z+24, r24	; 0x18
+    cube[25] = 2;
+    1010:	81 8f       	std	Z+25, r24	; 0x19
+    cube[26] = 2;
+    1012:	82 8f       	std	Z+26, r24	; 0x1a
+    cube[30] = 2;
+    1014:	86 8f       	std	Z+30, r24	; 0x1e
+    cube[31] = 2;
+    1016:	87 8f       	std	Z+31, r24	; 0x1f
+    cube[32] = 2;
+    1018:	80 a3       	std	Z+32, r24	; 0x20
+    cube[21] = 3;
+    101a:	83 e0       	ldi	r24, 0x03	; 3
+    101c:	85 8b       	std	Z+21, r24	; 0x15
+    cube[22] = 3;
+    101e:	86 8b       	std	Z+22, r24	; 0x16
+    cube[23] = 3;
+    1020:	87 8b       	std	Z+23, r24	; 0x17
+    cube[27] = 3;
+    1022:	83 8f       	std	Z+27, r24	; 0x1b
+    cube[28] = 3;
+    1024:	84 8f       	std	Z+28, r24	; 0x1c
+    cube[29] = 3;
+    1026:	85 8f       	std	Z+29, r24	; 0x1d
+    cube[33] = 3;
+    1028:	81 a3       	std	Z+33, r24	; 0x21
+    cube[34] = 3;
+    102a:	82 a3       	std	Z+34, r24	; 0x22
+    cube[35] = 3;
+    102c:	83 a3       	std	Z+35, r24	; 0x23
+    cube[36] = 4;
+    102e:	84 e0       	ldi	r24, 0x04	; 4
+    1030:	84 a3       	std	Z+36, r24	; 0x24
+    cube[37] = 4;
+    1032:	85 a3       	std	Z+37, r24	; 0x25
+    cube[38] = 4;
+    1034:	86 a3       	std	Z+38, r24	; 0x26
+    cube[42] = 4;
+    1036:	82 a7       	std	Z+42, r24	; 0x2a
+    cube[43] = 4;
+    1038:	83 a7       	std	Z+43, r24	; 0x2b
+    cube[44] = 4;
+    103a:	84 a7       	std	Z+44, r24	; 0x2c
+    cube[48] = 4;
+    103c:	80 ab       	std	Z+48, r24	; 0x30
+    cube[49] = 4;
+    103e:	81 ab       	std	Z+49, r24	; 0x31
+    cube[50] = 4;
+    1040:	82 ab       	std	Z+50, r24	; 0x32
+    cube[39] = 5;
+    1042:	85 e0       	ldi	r24, 0x05	; 5
+    1044:	87 a3       	std	Z+39, r24	; 0x27
+    cube[40] = 5;
+    1046:	80 a7       	std	Z+40, r24	; 0x28
+    cube[41] = 5;
+    1048:	81 a7       	std	Z+41, r24	; 0x29
+    cube[45] = 5;
+    104a:	85 a7       	std	Z+45, r24	; 0x2d
+    cube[46] = 5;
+    104c:	86 a7       	std	Z+46, r24	; 0x2e
+    cube[47] = 5;
+    104e:	87 a7       	std	Z+47, r24	; 0x2f
+    cube[51] = 5;
+    1050:	83 ab       	std	Z+51, r24	; 0x33
+    cube[52] = 5;
+    1052:	84 ab       	std	Z+52, r24	; 0x34
+    cube[53] = 5;
+    1054:	85 ab       	std	Z+53, r24	; 0x35
+    1056:	08 95       	ret
+
+Disassembly of section .text.displayCube:
+
+00000dca <displayCube>:
+}
+
+void displayCube(int8_t cube[], int8_t bits[]) {
+ dca:	0f 93       	push	r16
+ dcc:	1f 93       	push	r17
+ dce:	cf 93       	push	r28
+ dd0:	df 93       	push	r29
+ dd2:	8c 01       	movw	r16, r24
+ dd4:	eb 01       	movw	r28, r22
+    getBitsFromCube(0,cube,bits);
+ dd6:	ab 01       	movw	r20, r22
+ dd8:	bc 01       	movw	r22, r24
+ dda:	80 e0       	ldi	r24, 0x00	; 0
+ ddc:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,0);
+ de0:	60 e0       	ldi	r22, 0x00	; 0
+ de2:	ce 01       	movw	r24, r28
+ de4:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(1,cube,bits);
+ de8:	ae 01       	movw	r20, r28
+ dea:	b8 01       	movw	r22, r16
+ dec:	81 e0       	ldi	r24, 0x01	; 1
+ dee:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,1);
+ df2:	61 e0       	ldi	r22, 0x01	; 1
+ df4:	ce 01       	movw	r24, r28
+ df6:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(2,cube,bits);
+ dfa:	ae 01       	movw	r20, r28
+ dfc:	b8 01       	movw	r22, r16
+ dfe:	82 e0       	ldi	r24, 0x02	; 2
+ e00:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,2);
+ e04:	62 e0       	ldi	r22, 0x02	; 2
+ e06:	ce 01       	movw	r24, r28
+ e08:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(3,cube,bits);
+ e0c:	ae 01       	movw	r20, r28
+ e0e:	b8 01       	movw	r22, r16
+ e10:	83 e0       	ldi	r24, 0x03	; 3
+ e12:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,3);
+ e16:	63 e0       	ldi	r22, 0x03	; 3
+ e18:	ce 01       	movw	r24, r28
+ e1a:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(4,cube,bits);
+ e1e:	ae 01       	movw	r20, r28
+ e20:	b8 01       	movw	r22, r16
+ e22:	84 e0       	ldi	r24, 0x04	; 4
+ e24:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,4);
+ e28:	64 e0       	ldi	r22, 0x04	; 4
+ e2a:	ce 01       	movw	r24, r28
+ e2c:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(5,cube,bits);
+ e30:	ae 01       	movw	r20, r28
+ e32:	b8 01       	movw	r22, r16
+ e34:	85 e0       	ldi	r24, 0x05	; 5
+ e36:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,5);
+ e3a:	65 e0       	ldi	r22, 0x05	; 5
+ e3c:	ce 01       	movw	r24, r28
+ e3e:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(6,cube,bits);
+ e42:	ae 01       	movw	r20, r28
+ e44:	b8 01       	movw	r22, r16
+ e46:	86 e0       	ldi	r24, 0x06	; 6
+ e48:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,6);
+ e4c:	66 e0       	ldi	r22, 0x06	; 6
+ e4e:	ce 01       	movw	r24, r28
+ e50:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(7,cube,bits);
+ e54:	ae 01       	movw	r20, r28
+ e56:	b8 01       	movw	r22, r16
+ e58:	87 e0       	ldi	r24, 0x07	; 7
+ e5a:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,7);
+ e5e:	67 e0       	ldi	r22, 0x07	; 7
+ e60:	ce 01       	movw	r24, r28
+ e62:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+    getBitsFromCube(8,cube,bits);
+ e66:	ae 01       	movw	r20, r28
+ e68:	b8 01       	movw	r22, r16
+ e6a:	88 e0       	ldi	r24, 0x08	; 8
+ e6c:	0e 94 a1 03 	call	0x742	; 0x742 <getBitsFromCube>
+    passBar(bits,8);
+ e70:	68 e0       	ldi	r22, 0x08	; 8
+ e72:	ce 01       	movw	r24, r28
+ e74:	0e 94 9b 07 	call	0xf36	; 0xf36 <passBar>
+}
+ e78:	df 91       	pop	r29
+ e7a:	cf 91       	pop	r28
+ e7c:	1f 91       	pop	r17
+ e7e:	0f 91       	pop	r16
+ e80:	08 95       	ret
+
+Disassembly of section .text.shiftVector:
+
+00000c88 <shiftVector>:
+
+void shiftVector(int8_t dir, int8_t times, int8_t size, int8_t v[]) {
+ c88:	ef 92       	push	r14
+ c8a:	ff 92       	push	r15
+ c8c:	0f 93       	push	r16
+ c8e:	1f 93       	push	r17
+ c90:	cf 93       	push	r28
+ c92:	df 93       	push	r29
+ c94:	00 d0       	rcall	.+0      	; 0xc96 <shiftVector+0xe>
+ c96:	1f 92       	push	r1
+ c98:	cd b7       	in	r28, 0x3d	; 61
+ c9a:	de b7       	in	r29, 0x3e	; 62
+    int i;
+    int8_t aux[3];
+    
+    if (dir >= 0) {
+ c9c:	88 23       	and	r24, r24
+ c9e:	74 f4       	brge	.+28     	; 0xcbc <shiftVector+0x34>
+ ca0:	48 c0       	rjmp	.+144    	; 0xd32 <shiftVector+0xaa>
+        for (i = 0; i < times; i++) {
+            aux[i] = v[i];
+ ca2:	f9 01       	movw	r30, r18
+ ca4:	e8 0f       	add	r30, r24
+ ca6:	f9 1f       	adc	r31, r25
+ ca8:	50 81       	ld	r21, Z
+ caa:	e1 e0       	ldi	r30, 0x01	; 1
+ cac:	f0 e0       	ldi	r31, 0x00	; 0
+ cae:	ec 0f       	add	r30, r28
+ cb0:	fd 1f       	adc	r31, r29
+ cb2:	e8 0f       	add	r30, r24
+ cb4:	f9 1f       	adc	r31, r25
+ cb6:	50 83       	st	Z, r21
+void shiftVector(int8_t dir, int8_t times, int8_t size, int8_t v[]) {
+    int i;
+    int8_t aux[3];
+    
+    if (dir >= 0) {
+        for (i = 0; i < times; i++) {
+ cb8:	01 96       	adiw	r24, 0x01	; 1
+ cba:	02 c0       	rjmp	.+4      	; 0xcc0 <shiftVector+0x38>
+ cbc:	80 e0       	ldi	r24, 0x00	; 0
+ cbe:	90 e0       	ldi	r25, 0x00	; 0
+ cc0:	a6 2f       	mov	r26, r22
+ cc2:	06 2e       	mov	r0, r22
+ cc4:	00 0c       	add	r0, r0
+ cc6:	bb 0b       	sbc	r27, r27
+ cc8:	8a 17       	cp	r24, r26
+ cca:	9b 07       	cpc	r25, r27
+ ccc:	54 f3       	brlt	.-44     	; 0xca2 <shiftVector+0x1a>
+ cce:	80 e0       	ldi	r24, 0x00	; 0
+ cd0:	90 e0       	ldi	r25, 0x00	; 0
+ cd2:	0c c0       	rjmp	.+24     	; 0xcec <shiftVector+0x64>
+            aux[i] = v[i];
+        }
+        for (i = 0; i < size-times; i++) {
+            v[i] = v[i+times];
+ cd4:	b9 01       	movw	r22, r18
+ cd6:	68 0f       	add	r22, r24
+ cd8:	79 1f       	adc	r23, r25
+ cda:	fc 01       	movw	r30, r24
+ cdc:	ea 0f       	add	r30, r26
+ cde:	fb 1f       	adc	r31, r27
+ ce0:	e2 0f       	add	r30, r18
+ ce2:	f3 1f       	adc	r31, r19
+ ce4:	50 81       	ld	r21, Z
+ ce6:	fb 01       	movw	r30, r22
+ ce8:	50 83       	st	Z, r21
+    
+    if (dir >= 0) {
+        for (i = 0; i < times; i++) {
+            aux[i] = v[i];
+        }
+        for (i = 0; i < size-times; i++) {
+ cea:	01 96       	adiw	r24, 0x01	; 1
+ cec:	e4 2e       	mov	r14, r20
+ cee:	04 2e       	mov	r0, r20
+ cf0:	00 0c       	add	r0, r0
+ cf2:	ff 08       	sbc	r15, r15
+ cf4:	b7 01       	movw	r22, r14
+ cf6:	6a 1b       	sub	r22, r26
+ cf8:	7b 0b       	sbc	r23, r27
+ cfa:	86 17       	cp	r24, r22
+ cfc:	97 07       	cpc	r25, r23
+ cfe:	54 f3       	brlt	.-44     	; 0xcd4 <shiftVector+0x4c>
+ d00:	14 c0       	rjmp	.+40     	; 0xd2a <shiftVector+0xa2>
+            v[i] = v[i+times];
+        }
+        for (i = size-times; i < size; i++) {
+            v[i] = aux[i-size+times];
+ d02:	a9 01       	movw	r20, r18
+ d04:	46 0f       	add	r20, r22
+ d06:	57 1f       	adc	r21, r23
+ d08:	cb 01       	movw	r24, r22
+ d0a:	8e 19       	sub	r24, r14
+ d0c:	9f 09       	sbc	r25, r15
+ d0e:	8a 0f       	add	r24, r26
+ d10:	9b 1f       	adc	r25, r27
+ d12:	01 e0       	ldi	r16, 0x01	; 1
+ d14:	10 e0       	ldi	r17, 0x00	; 0
+ d16:	0c 0f       	add	r16, r28
+ d18:	1d 1f       	adc	r17, r29
+ d1a:	80 0f       	add	r24, r16
+ d1c:	91 1f       	adc	r25, r17
+ d1e:	fc 01       	movw	r30, r24
+ d20:	80 81       	ld	r24, Z
+ d22:	fa 01       	movw	r30, r20
+ d24:	80 83       	st	Z, r24
+            aux[i] = v[i];
+        }
+        for (i = 0; i < size-times; i++) {
+            v[i] = v[i+times];
+        }
+        for (i = size-times; i < size; i++) {
+ d26:	6f 5f       	subi	r22, 0xFF	; 255
+ d28:	7f 4f       	sbci	r23, 0xFF	; 255
+ d2a:	6e 15       	cp	r22, r14
+ d2c:	7f 05       	cpc	r23, r15
+ d2e:	4c f3       	brlt	.-46     	; 0xd02 <shiftVector+0x7a>
+ d30:	42 c0       	rjmp	.+132    	; 0xdb6 <shiftVector+0x12e>
+            v[i] = aux[i-size+times];
+        }
+    }
+    else {
+        for (i = size-times; i < size; i++) {
+ d32:	04 2e       	mov	r0, r20
+ d34:	00 0c       	add	r0, r0
+ d36:	55 0b       	sbc	r21, r21
+ d38:	06 2e       	mov	r0, r22
+ d3a:	00 0c       	add	r0, r0
+ d3c:	77 0b       	sbc	r23, r23
+ d3e:	ca 01       	movw	r24, r20
+ d40:	86 1b       	sub	r24, r22
+ d42:	97 0b       	sbc	r25, r23
+ d44:	11 c0       	rjmp	.+34     	; 0xd68 <shiftVector+0xe0>
+            aux[i-size+times] = v[i];
+ d46:	fc 01       	movw	r30, r24
+ d48:	e4 1b       	sub	r30, r20
+ d4a:	f5 0b       	sbc	r31, r21
+ d4c:	e6 0f       	add	r30, r22
+ d4e:	f7 1f       	adc	r31, r23
+ d50:	d9 01       	movw	r26, r18
+ d52:	a8 0f       	add	r26, r24
+ d54:	b9 1f       	adc	r27, r25
+ d56:	ac 91       	ld	r26, X
+ d58:	01 e0       	ldi	r16, 0x01	; 1
+ d5a:	10 e0       	ldi	r17, 0x00	; 0
+ d5c:	0c 0f       	add	r16, r28
+ d5e:	1d 1f       	adc	r17, r29
+ d60:	e0 0f       	add	r30, r16
+ d62:	f1 1f       	adc	r31, r17
+ d64:	a0 83       	st	Z, r26
+        for (i = size-times; i < size; i++) {
+            v[i] = aux[i-size+times];
+        }
+    }
+    else {
+        for (i = size-times; i < size; i++) {
+ d66:	01 96       	adiw	r24, 0x01	; 1
+ d68:	84 17       	cp	r24, r20
+ d6a:	95 07       	cpc	r25, r21
+ d6c:	64 f3       	brlt	.-40     	; 0xd46 <shiftVector+0xbe>
+            aux[i-size+times] = v[i];
+        }
+        for (i = size-1; i >= times; i--) {
+ d6e:	41 50       	subi	r20, 0x01	; 1
+ d70:	51 09       	sbc	r21, r1
+ d72:	0c c0       	rjmp	.+24     	; 0xd8c <shiftVector+0x104>
+            v[i] = v[i-times];
+ d74:	d9 01       	movw	r26, r18
+ d76:	a4 0f       	add	r26, r20
+ d78:	b5 1f       	adc	r27, r21
+ d7a:	fa 01       	movw	r30, r20
+ d7c:	e6 1b       	sub	r30, r22
+ d7e:	f7 0b       	sbc	r31, r23
+ d80:	e2 0f       	add	r30, r18
+ d82:	f3 1f       	adc	r31, r19
+ d84:	80 81       	ld	r24, Z
+ d86:	8c 93       	st	X, r24
+    }
+    else {
+        for (i = size-times; i < size; i++) {
+            aux[i-size+times] = v[i];
+        }
+        for (i = size-1; i >= times; i--) {
+ d88:	41 50       	subi	r20, 0x01	; 1
+ d8a:	51 09       	sbc	r21, r1
+ d8c:	46 17       	cp	r20, r22
+ d8e:	57 07       	cpc	r21, r23
+ d90:	8c f7       	brge	.-30     	; 0xd74 <shiftVector+0xec>
+ d92:	80 e0       	ldi	r24, 0x00	; 0
+ d94:	90 e0       	ldi	r25, 0x00	; 0
+ d96:	0c c0       	rjmp	.+24     	; 0xdb0 <shiftVector+0x128>
+            v[i] = v[i-times];
+        }
+        for (i = 0; i < times; i++) {
+            v[i] = aux[i];
+ d98:	d9 01       	movw	r26, r18
+ d9a:	a8 0f       	add	r26, r24
+ d9c:	b9 1f       	adc	r27, r25
+ d9e:	e1 e0       	ldi	r30, 0x01	; 1
+ da0:	f0 e0       	ldi	r31, 0x00	; 0
+ da2:	ec 0f       	add	r30, r28
+ da4:	fd 1f       	adc	r31, r29
+ da6:	e8 0f       	add	r30, r24
+ da8:	f9 1f       	adc	r31, r25
+ daa:	40 81       	ld	r20, Z
+ dac:	4c 93       	st	X, r20
+            aux[i-size+times] = v[i];
+        }
+        for (i = size-1; i >= times; i--) {
+            v[i] = v[i-times];
+        }
+        for (i = 0; i < times; i++) {
+ dae:	01 96       	adiw	r24, 0x01	; 1
+ db0:	86 17       	cp	r24, r22
+ db2:	97 07       	cpc	r25, r23
+ db4:	8c f3       	brlt	.-30     	; 0xd98 <shiftVector+0x110>
+            v[i] = aux[i];
+        }
+    }
+}
+ db6:	0f 90       	pop	r0
+ db8:	0f 90       	pop	r0
+ dba:	0f 90       	pop	r0
+ dbc:	df 91       	pop	r29
+ dbe:	cf 91       	pop	r28
+ dc0:	1f 91       	pop	r17
+ dc2:	0f 91       	pop	r16
+ dc4:	ff 90       	pop	r15
+ dc6:	ef 90       	pop	r14
+ dc8:	08 95       	ret
+
+Disassembly of section .text.doMove:
+
+000000d8 <doMove>:
+
+void doMove(int8_t dir, int8_t move, int8_t cube[]) {
+  d8:	ef 92       	push	r14
+  da:	ff 92       	push	r15
+  dc:	0f 93       	push	r16
+  de:	1f 93       	push	r17
+  e0:	cf 93       	push	r28
+  e2:	df 93       	push	r29
+  e4:	cd b7       	in	r28, 0x3d	; 61
+  e6:	de b7       	in	r29, 0x3e	; 62
+  e8:	68 97       	sbiw	r28, 0x18	; 24
+  ea:	0f b6       	in	r0, 0x3f	; 63
+  ec:	f8 94       	cli
+  ee:	de bf       	out	0x3e, r29	; 62
+  f0:	0f be       	out	0x3f, r0	; 63
+  f2:	cd bf       	out	0x3d, r28	; 61
+  f4:	e8 2e       	mov	r14, r24
+  f6:	f6 2e       	mov	r15, r22
+  f8:	8a 01       	movw	r16, r20
+    int i;
+    int8_t aux[12];
+    int8_t miscari[12];
+    
+    //invartim in jurul axei x
+    if (0 <= move && move <= 2) {
+  fa:	82 e0       	ldi	r24, 0x02	; 2
+  fc:	86 17       	cp	r24, r22
+  fe:	08 f4       	brcc	.+2      	; 0x102 <doMove+0x2a>
+ 100:	f8 c0       	rjmp	.+496    	; 0x2f2 <__EEPROM_REGION_LENGTH__+0xf2>
+        miscari[0] = 3;
+ 102:	83 e0       	ldi	r24, 0x03	; 3
+ 104:	8d 87       	std	Y+13, r24	; 0x0d
+        miscari[1] = 9;
+ 106:	89 e0       	ldi	r24, 0x09	; 9
+ 108:	8e 87       	std	Y+14, r24	; 0x0e
+        miscari[2] = 15;
+ 10a:	8f e0       	ldi	r24, 0x0F	; 15
+ 10c:	8f 87       	std	Y+15, r24	; 0x0f
+        miscari[3] = 41;
+ 10e:	89 e2       	ldi	r24, 0x29	; 41
+ 110:	88 8b       	std	Y+16, r24	; 0x10
+        miscari[4] = 47;
+ 112:	8f e2       	ldi	r24, 0x2F	; 47
+ 114:	89 8b       	std	Y+17, r24	; 0x11
+        miscari[5] = 53;
+ 116:	85 e3       	ldi	r24, 0x35	; 53
+ 118:	8a 8b       	std	Y+18, r24	; 0x12
+        miscari[6] = 35;
+ 11a:	83 e2       	ldi	r24, 0x23	; 35
+ 11c:	8b 8b       	std	Y+19, r24	; 0x13
+        miscari[7] = 29;
+ 11e:	8d e1       	ldi	r24, 0x1D	; 29
+ 120:	8c 8b       	std	Y+20, r24	; 0x14
+        miscari[8] = 23;
+ 122:	87 e1       	ldi	r24, 0x17	; 23
+ 124:	8d 8b       	std	Y+21, r24	; 0x15
+        miscari[9] = 48;
+ 126:	80 e3       	ldi	r24, 0x30	; 48
+ 128:	8e 8b       	std	Y+22, r24	; 0x16
+        miscari[10] = 42;
+ 12a:	8a e2       	ldi	r24, 0x2A	; 42
+ 12c:	8f 8b       	std	Y+23, r24	; 0x17
+        miscari[11] = 36;
+ 12e:	84 e2       	ldi	r24, 0x24	; 36
+ 130:	88 8f       	std	Y+24, r24	; 0x18
+        
+        for (i = 0; i < 12; i++) {
+ 132:	80 e0       	ldi	r24, 0x00	; 0
+ 134:	90 e0       	ldi	r25, 0x00	; 0
+ 136:	39 c0       	rjmp	.+114    	; 0x1aa <doMove+0xd2>
+            if (i < 3 || i > 8) {
+ 138:	9c 01       	movw	r18, r24
+ 13a:	23 50       	subi	r18, 0x03	; 3
+ 13c:	31 09       	sbc	r19, r1
+ 13e:	26 30       	cpi	r18, 0x06	; 6
+ 140:	31 05       	cpc	r19, r1
+ 142:	d0 f0       	brcs	.+52     	; 0x178 <doMove+0xa0>
+                aux[i] = cube[miscari[i]+move];
+ 144:	ed e0       	ldi	r30, 0x0D	; 13
+ 146:	f0 e0       	ldi	r31, 0x00	; 0
+ 148:	ec 0f       	add	r30, r28
+ 14a:	fd 1f       	adc	r31, r29
+ 14c:	e8 0f       	add	r30, r24
+ 14e:	f9 1f       	adc	r31, r25
+ 150:	20 81       	ld	r18, Z
+ 152:	ef 2d       	mov	r30, r15
+ 154:	0f 2c       	mov	r0, r15
+ 156:	00 0c       	add	r0, r0
+ 158:	ff 0b       	sbc	r31, r31
+ 15a:	e2 0f       	add	r30, r18
+ 15c:	f1 1d       	adc	r31, r1
+ 15e:	27 fd       	sbrc	r18, 7
+ 160:	fa 95       	dec	r31
+ 162:	e0 0f       	add	r30, r16
+ 164:	f1 1f       	adc	r31, r17
+ 166:	20 81       	ld	r18, Z
+ 168:	e1 e0       	ldi	r30, 0x01	; 1
+ 16a:	f0 e0       	ldi	r31, 0x00	; 0
+ 16c:	ec 0f       	add	r30, r28
+ 16e:	fd 1f       	adc	r31, r29
+ 170:	e8 0f       	add	r30, r24
+ 172:	f9 1f       	adc	r31, r25
+ 174:	20 83       	st	Z, r18
+ 176:	18 c0       	rjmp	.+48     	; 0x1a8 <doMove+0xd0>
+            }
+            else {
+                aux[i] = cube[miscari[i]-move];
+ 178:	ed e0       	ldi	r30, 0x0D	; 13
+ 17a:	f0 e0       	ldi	r31, 0x00	; 0
+ 17c:	ec 0f       	add	r30, r28
+ 17e:	fd 1f       	adc	r31, r29
+ 180:	e8 0f       	add	r30, r24
+ 182:	f9 1f       	adc	r31, r25
+ 184:	e0 81       	ld	r30, Z
+ 186:	0e 2e       	mov	r0, r30
+ 188:	00 0c       	add	r0, r0
+ 18a:	ff 0b       	sbc	r31, r31
+ 18c:	ef 19       	sub	r30, r15
+ 18e:	f1 09       	sbc	r31, r1
+ 190:	f7 fc       	sbrc	r15, 7
+ 192:	f3 95       	inc	r31
+ 194:	e0 0f       	add	r30, r16
+ 196:	f1 1f       	adc	r31, r17
+ 198:	20 81       	ld	r18, Z
+ 19a:	e1 e0       	ldi	r30, 0x01	; 1
+ 19c:	f0 e0       	ldi	r31, 0x00	; 0
+ 19e:	ec 0f       	add	r30, r28
+ 1a0:	fd 1f       	adc	r31, r29
+ 1a2:	e8 0f       	add	r30, r24
+ 1a4:	f9 1f       	adc	r31, r25
+ 1a6:	20 83       	st	Z, r18
+        miscari[8] = 23;
+        miscari[9] = 48;
+        miscari[10] = 42;
+        miscari[11] = 36;
+        
+        for (i = 0; i < 12; i++) {
+ 1a8:	01 96       	adiw	r24, 0x01	; 1
+ 1aa:	8c 30       	cpi	r24, 0x0C	; 12
+ 1ac:	91 05       	cpc	r25, r1
+ 1ae:	24 f2       	brlt	.-120    	; 0x138 <doMove+0x60>
+            }
+            else {
+                aux[i] = cube[miscari[i]-move];
+            }
+        }
+        shiftVector(dir,3,12,aux);
+ 1b0:	9e 01       	movw	r18, r28
+ 1b2:	2f 5f       	subi	r18, 0xFF	; 255
+ 1b4:	3f 4f       	sbci	r19, 0xFF	; 255
+ 1b6:	4c e0       	ldi	r20, 0x0C	; 12
+ 1b8:	63 e0       	ldi	r22, 0x03	; 3
+ 1ba:	8e 2d       	mov	r24, r14
+ 1bc:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+        for (i = 0; i < 12; i++) {
+ 1c0:	80 e0       	ldi	r24, 0x00	; 0
+ 1c2:	90 e0       	ldi	r25, 0x00	; 0
+ 1c4:	39 c0       	rjmp	.+114    	; 0x238 <__EEPROM_REGION_LENGTH__+0x38>
+            if (i < 3 || i > 8) {
+ 1c6:	9c 01       	movw	r18, r24
+ 1c8:	23 50       	subi	r18, 0x03	; 3
+ 1ca:	31 09       	sbc	r19, r1
+ 1cc:	26 30       	cpi	r18, 0x06	; 6
+ 1ce:	31 05       	cpc	r19, r1
+ 1d0:	d0 f0       	brcs	.+52     	; 0x206 <__EEPROM_REGION_LENGTH__+0x6>
+                cube[miscari[i]+move] = aux[i];
+ 1d2:	ed e0       	ldi	r30, 0x0D	; 13
+ 1d4:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d6:	ec 0f       	add	r30, r28
+ 1d8:	fd 1f       	adc	r31, r29
+ 1da:	e8 0f       	add	r30, r24
+ 1dc:	f9 1f       	adc	r31, r25
+ 1de:	20 81       	ld	r18, Z
+ 1e0:	ef 2d       	mov	r30, r15
+ 1e2:	0f 2c       	mov	r0, r15
+ 1e4:	00 0c       	add	r0, r0
+ 1e6:	ff 0b       	sbc	r31, r31
+ 1e8:	e2 0f       	add	r30, r18
+ 1ea:	f1 1d       	adc	r31, r1
+ 1ec:	27 fd       	sbrc	r18, 7
+ 1ee:	fa 95       	dec	r31
+ 1f0:	e0 0f       	add	r30, r16
+ 1f2:	f1 1f       	adc	r31, r17
+ 1f4:	a1 e0       	ldi	r26, 0x01	; 1
+ 1f6:	b0 e0       	ldi	r27, 0x00	; 0
+ 1f8:	ac 0f       	add	r26, r28
+ 1fa:	bd 1f       	adc	r27, r29
+ 1fc:	a8 0f       	add	r26, r24
+ 1fe:	b9 1f       	adc	r27, r25
+ 200:	2c 91       	ld	r18, X
+ 202:	20 83       	st	Z, r18
+ 204:	18 c0       	rjmp	.+48     	; 0x236 <__EEPROM_REGION_LENGTH__+0x36>
+            }
+            else {
+                cube[miscari[i]-move] = aux[i];
+ 206:	ed e0       	ldi	r30, 0x0D	; 13
+ 208:	f0 e0       	ldi	r31, 0x00	; 0
+ 20a:	ec 0f       	add	r30, r28
+ 20c:	fd 1f       	adc	r31, r29
+ 20e:	e8 0f       	add	r30, r24
+ 210:	f9 1f       	adc	r31, r25
+ 212:	e0 81       	ld	r30, Z
+ 214:	0e 2e       	mov	r0, r30
+ 216:	00 0c       	add	r0, r0
+ 218:	ff 0b       	sbc	r31, r31
+ 21a:	ef 19       	sub	r30, r15
+ 21c:	f1 09       	sbc	r31, r1
+ 21e:	f7 fc       	sbrc	r15, 7
+ 220:	f3 95       	inc	r31
+ 222:	e0 0f       	add	r30, r16
+ 224:	f1 1f       	adc	r31, r17
+ 226:	a1 e0       	ldi	r26, 0x01	; 1
+ 228:	b0 e0       	ldi	r27, 0x00	; 0
+ 22a:	ac 0f       	add	r26, r28
+ 22c:	bd 1f       	adc	r27, r29
+ 22e:	a8 0f       	add	r26, r24
+ 230:	b9 1f       	adc	r27, r25
+ 232:	2c 91       	ld	r18, X
+ 234:	20 83       	st	Z, r18
+            else {
+                aux[i] = cube[miscari[i]-move];
+            }
+        }
+        shiftVector(dir,3,12,aux);
+        for (i = 0; i < 12; i++) {
+ 236:	01 96       	adiw	r24, 0x01	; 1
+ 238:	8c 30       	cpi	r24, 0x0C	; 12
+ 23a:	91 05       	cpc	r25, r1
+ 23c:	24 f2       	brlt	.-120    	; 0x1c6 <doMove+0xee>
+            else {
+                cube[miscari[i]-move] = aux[i];
+            }
+        }
+        
+        if (move == 0) {
+ 23e:	f1 10       	cpse	r15, r1
+ 240:	2a c0       	rjmp	.+84     	; 0x296 <__EEPROM_REGION_LENGTH__+0x96>
+            aux[0] = cube[0];
+ 242:	f8 01       	movw	r30, r16
+ 244:	80 81       	ld	r24, Z
+ 246:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[1];
+ 248:	81 81       	ldd	r24, Z+1	; 0x01
+ 24a:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[2];
+ 24c:	82 81       	ldd	r24, Z+2	; 0x02
+ 24e:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[8];
+ 250:	80 85       	ldd	r24, Z+8	; 0x08
+ 252:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[14];
+ 254:	86 85       	ldd	r24, Z+14	; 0x0e
+ 256:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[13];
+ 258:	85 85       	ldd	r24, Z+13	; 0x0d
+ 25a:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[12];
+ 25c:	84 85       	ldd	r24, Z+12	; 0x0c
+ 25e:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[6];
+ 260:	86 81       	ldd	r24, Z+6	; 0x06
+ 262:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 264:	9e 01       	movw	r18, r28
+ 266:	2f 5f       	subi	r18, 0xFF	; 255
+ 268:	3f 4f       	sbci	r19, 0xFF	; 255
+ 26a:	48 e0       	ldi	r20, 0x08	; 8
+ 26c:	62 e0       	ldi	r22, 0x02	; 2
+ 26e:	8e 2d       	mov	r24, r14
+ 270:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[0] = aux[0];
+ 274:	89 81       	ldd	r24, Y+1	; 0x01
+ 276:	f8 01       	movw	r30, r16
+ 278:	80 83       	st	Z, r24
+            cube[1] = aux[1];
+ 27a:	8a 81       	ldd	r24, Y+2	; 0x02
+ 27c:	81 83       	std	Z+1, r24	; 0x01
+            cube[2] = aux[2];
+ 27e:	8b 81       	ldd	r24, Y+3	; 0x03
+ 280:	82 83       	std	Z+2, r24	; 0x02
+            cube[8] = aux[3];
+ 282:	8c 81       	ldd	r24, Y+4	; 0x04
+ 284:	80 87       	std	Z+8, r24	; 0x08
+            cube[14] = aux[4];
+ 286:	8d 81       	ldd	r24, Y+5	; 0x05
+ 288:	86 87       	std	Z+14, r24	; 0x0e
+            cube[13] = aux[5];
+ 28a:	8e 81       	ldd	r24, Y+6	; 0x06
+ 28c:	85 87       	std	Z+13, r24	; 0x0d
+            cube[12] = aux[6];
+ 28e:	8f 81       	ldd	r24, Y+7	; 0x07
+ 290:	84 87       	std	Z+12, r24	; 0x0c
+            cube[6] = aux[7];
+ 292:	88 85       	ldd	r24, Y+8	; 0x08
+ 294:	86 83       	std	Z+6, r24	; 0x06
+        }
+        if (move == 2) {
+ 296:	f2 e0       	ldi	r31, 0x02	; 2
+ 298:	ff 12       	cpse	r15, r31
+ 29a:	46 c2       	rjmp	.+1164   	; 0x728 <__stack+0x229>
+            aux[0] = cube[18];
+ 29c:	f8 01       	movw	r30, r16
+ 29e:	82 89       	ldd	r24, Z+18	; 0x12
+ 2a0:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[24];
+ 2a2:	80 8d       	ldd	r24, Z+24	; 0x18
+ 2a4:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[30];
+ 2a6:	86 8d       	ldd	r24, Z+30	; 0x1e
+ 2a8:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[31];
+ 2aa:	87 8d       	ldd	r24, Z+31	; 0x1f
+ 2ac:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[32];
+ 2ae:	80 a1       	ldd	r24, Z+32	; 0x20
+ 2b0:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[26];
+ 2b2:	82 8d       	ldd	r24, Z+26	; 0x1a
+ 2b4:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[20];
+ 2b6:	84 89       	ldd	r24, Z+20	; 0x14
+ 2b8:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[19];
+ 2ba:	83 89       	ldd	r24, Z+19	; 0x13
+ 2bc:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 2be:	9e 01       	movw	r18, r28
+ 2c0:	2f 5f       	subi	r18, 0xFF	; 255
+ 2c2:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2c4:	48 e0       	ldi	r20, 0x08	; 8
+ 2c6:	62 e0       	ldi	r22, 0x02	; 2
+ 2c8:	8e 2d       	mov	r24, r14
+ 2ca:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[18] = aux[0];
+ 2ce:	89 81       	ldd	r24, Y+1	; 0x01
+ 2d0:	f8 01       	movw	r30, r16
+ 2d2:	82 8b       	std	Z+18, r24	; 0x12
+            cube[24] = aux[1];
+ 2d4:	8a 81       	ldd	r24, Y+2	; 0x02
+ 2d6:	80 8f       	std	Z+24, r24	; 0x18
+            cube[30] = aux[2];
+ 2d8:	8b 81       	ldd	r24, Y+3	; 0x03
+ 2da:	86 8f       	std	Z+30, r24	; 0x1e
+            cube[31] = aux[3];
+ 2dc:	8c 81       	ldd	r24, Y+4	; 0x04
+ 2de:	87 8f       	std	Z+31, r24	; 0x1f
+            cube[32] = aux[4];
+ 2e0:	8d 81       	ldd	r24, Y+5	; 0x05
+ 2e2:	80 a3       	std	Z+32, r24	; 0x20
+            cube[26] = aux[5];
+ 2e4:	8e 81       	ldd	r24, Y+6	; 0x06
+ 2e6:	82 8f       	std	Z+26, r24	; 0x1a
+            cube[20] = aux[6];
+ 2e8:	8f 81       	ldd	r24, Y+7	; 0x07
+ 2ea:	84 8b       	std	Z+20, r24	; 0x14
+            cube[19] = aux[7];
+ 2ec:	88 85       	ldd	r24, Y+8	; 0x08
+ 2ee:	83 8b       	std	Z+19, r24	; 0x13
+ 2f0:	1b c2       	rjmp	.+1078   	; 0x728 <__stack+0x229>
+        }
+    }
+    //invartim in jurul axey y
+    else if (3 <= move && move <= 5) {
+ 2f2:	8d ef       	ldi	r24, 0xFD	; 253
+ 2f4:	86 0f       	add	r24, r22
+ 2f6:	83 30       	cpi	r24, 0x03	; 3
+ 2f8:	08 f0       	brcs	.+2      	; 0x2fc <__EEPROM_REGION_LENGTH__+0xfc>
+ 2fa:	5d c1       	rjmp	.+698    	; 0x5b6 <__stack+0xb7>
+        miscari[0] = 0;
+ 2fc:	1d 86       	std	Y+13, r1	; 0x0d
+        miscari[1] = 6;
+ 2fe:	86 e0       	ldi	r24, 0x06	; 6
+ 300:	8e 87       	std	Y+14, r24	; 0x0e
+        miscari[2] = 12;
+ 302:	8c e0       	ldi	r24, 0x0C	; 12
+ 304:	8f 87       	std	Y+15, r24	; 0x0f
+        miscari[3] = 53;
+ 306:	85 e3       	ldi	r24, 0x35	; 53
+ 308:	88 8b       	std	Y+16, r24	; 0x10
+        miscari[4] = 52;
+ 30a:	84 e3       	ldi	r24, 0x34	; 52
+ 30c:	89 8b       	std	Y+17, r24	; 0x11
+        miscari[5] = 51;
+ 30e:	83 e3       	ldi	r24, 0x33	; 51
+ 310:	8a 8b       	std	Y+18, r24	; 0x12
+        miscari[6] = 32;
+ 312:	80 e2       	ldi	r24, 0x20	; 32
+ 314:	8b 8b       	std	Y+19, r24	; 0x13
+        miscari[7] = 26;
+ 316:	8a e1       	ldi	r24, 0x1A	; 26
+ 318:	8c 8b       	std	Y+20, r24	; 0x14
+        miscari[8] = 20;
+ 31a:	84 e1       	ldi	r24, 0x14	; 20
+ 31c:	8d 8b       	std	Y+21, r24	; 0x15
+        miscari[9] = 50;
+ 31e:	82 e3       	ldi	r24, 0x32	; 50
+ 320:	8e 8b       	std	Y+22, r24	; 0x16
+        miscari[10] = 49;
+ 322:	81 e3       	ldi	r24, 0x31	; 49
+ 324:	8f 8b       	std	Y+23, r24	; 0x17
+        miscari[11] = 48;
+ 326:	80 e3       	ldi	r24, 0x30	; 48
+ 328:	88 8f       	std	Y+24, r24	; 0x18
+        
+        for (i = 0; i < 12; i++) {
+ 32a:	80 e0       	ldi	r24, 0x00	; 0
+ 32c:	90 e0       	ldi	r25, 0x00	; 0
+ 32e:	5f c0       	rjmp	.+190    	; 0x3ee <__EEPROM_REGION_LENGTH__+0x1ee>
+            if (i < 3) {
+ 330:	83 30       	cpi	r24, 0x03	; 3
+ 332:	91 05       	cpc	r25, r1
+ 334:	dc f4       	brge	.+54     	; 0x36c <__EEPROM_REGION_LENGTH__+0x16c>
+                aux[i] = cube[miscari[i]+move-3];
+ 336:	ed e0       	ldi	r30, 0x0D	; 13
+ 338:	f0 e0       	ldi	r31, 0x00	; 0
+ 33a:	ec 0f       	add	r30, r28
+ 33c:	fd 1f       	adc	r31, r29
+ 33e:	e8 0f       	add	r30, r24
+ 340:	f9 1f       	adc	r31, r25
+ 342:	20 81       	ld	r18, Z
+ 344:	ef 2d       	mov	r30, r15
+ 346:	0f 2c       	mov	r0, r15
+ 348:	00 0c       	add	r0, r0
+ 34a:	ff 0b       	sbc	r31, r31
+ 34c:	e2 0f       	add	r30, r18
+ 34e:	f1 1d       	adc	r31, r1
+ 350:	27 fd       	sbrc	r18, 7
+ 352:	fa 95       	dec	r31
+ 354:	e0 0f       	add	r30, r16
+ 356:	f1 1f       	adc	r31, r17
+ 358:	33 97       	sbiw	r30, 0x03	; 3
+ 35a:	20 81       	ld	r18, Z
+ 35c:	e1 e0       	ldi	r30, 0x01	; 1
+ 35e:	f0 e0       	ldi	r31, 0x00	; 0
+ 360:	ec 0f       	add	r30, r28
+ 362:	fd 1f       	adc	r31, r29
+ 364:	e8 0f       	add	r30, r24
+ 366:	f9 1f       	adc	r31, r25
+ 368:	20 83       	st	Z, r18
+ 36a:	40 c0       	rjmp	.+128    	; 0x3ec <__EEPROM_REGION_LENGTH__+0x1ec>
+            }
+            else if (6 <= i && i <= 8) {
+ 36c:	9c 01       	movw	r18, r24
+ 36e:	26 50       	subi	r18, 0x06	; 6
+ 370:	31 09       	sbc	r19, r1
+ 372:	23 30       	cpi	r18, 0x03	; 3
+ 374:	31 05       	cpc	r19, r1
+ 376:	c8 f4       	brcc	.+50     	; 0x3aa <__EEPROM_REGION_LENGTH__+0x1aa>
+                aux[i] = cube[miscari[i]-move+3];
+ 378:	ed e0       	ldi	r30, 0x0D	; 13
+ 37a:	f0 e0       	ldi	r31, 0x00	; 0
+ 37c:	ec 0f       	add	r30, r28
+ 37e:	fd 1f       	adc	r31, r29
+ 380:	e8 0f       	add	r30, r24
+ 382:	f9 1f       	adc	r31, r25
+ 384:	e0 81       	ld	r30, Z
+ 386:	0e 2e       	mov	r0, r30
+ 388:	00 0c       	add	r0, r0
+ 38a:	ff 0b       	sbc	r31, r31
+ 38c:	ef 19       	sub	r30, r15
+ 38e:	f1 09       	sbc	r31, r1
+ 390:	f7 fc       	sbrc	r15, 7
+ 392:	f3 95       	inc	r31
+ 394:	e0 0f       	add	r30, r16
+ 396:	f1 1f       	adc	r31, r17
+ 398:	23 81       	ldd	r18, Z+3	; 0x03
+ 39a:	e1 e0       	ldi	r30, 0x01	; 1
+ 39c:	f0 e0       	ldi	r31, 0x00	; 0
+ 39e:	ec 0f       	add	r30, r28
+ 3a0:	fd 1f       	adc	r31, r29
+ 3a2:	e8 0f       	add	r30, r24
+ 3a4:	f9 1f       	adc	r31, r25
+ 3a6:	20 83       	st	Z, r18
+ 3a8:	21 c0       	rjmp	.+66     	; 0x3ec <__EEPROM_REGION_LENGTH__+0x1ec>
+            }
+            else {
+                aux[i] = cube[miscari[i]-(move-3)*6];
+ 3aa:	ed e0       	ldi	r30, 0x0D	; 13
+ 3ac:	f0 e0       	ldi	r31, 0x00	; 0
+ 3ae:	ec 0f       	add	r30, r28
+ 3b0:	fd 1f       	adc	r31, r29
+ 3b2:	e8 0f       	add	r30, r24
+ 3b4:	f9 1f       	adc	r31, r25
+ 3b6:	40 81       	ld	r20, Z
+ 3b8:	2f 2d       	mov	r18, r15
+ 3ba:	0f 2c       	mov	r0, r15
+ 3bc:	00 0c       	add	r0, r0
+ 3be:	33 0b       	sbc	r19, r19
+ 3c0:	23 50       	subi	r18, 0x03	; 3
+ 3c2:	31 09       	sbc	r19, r1
+ 3c4:	5a ef       	ldi	r21, 0xFA	; 250
+ 3c6:	52 03       	mulsu	r21, r18
+ 3c8:	f0 01       	movw	r30, r0
+ 3ca:	53 9f       	mul	r21, r19
+ 3cc:	f0 0d       	add	r31, r0
+ 3ce:	11 24       	eor	r1, r1
+ 3d0:	e4 0f       	add	r30, r20
+ 3d2:	f1 1d       	adc	r31, r1
+ 3d4:	47 fd       	sbrc	r20, 7
+ 3d6:	fa 95       	dec	r31
+ 3d8:	e0 0f       	add	r30, r16
+ 3da:	f1 1f       	adc	r31, r17
+ 3dc:	20 81       	ld	r18, Z
+ 3de:	e1 e0       	ldi	r30, 0x01	; 1
+ 3e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3e2:	ec 0f       	add	r30, r28
+ 3e4:	fd 1f       	adc	r31, r29
+ 3e6:	e8 0f       	add	r30, r24
+ 3e8:	f9 1f       	adc	r31, r25
+ 3ea:	20 83       	st	Z, r18
+        miscari[8] = 20;
+        miscari[9] = 50;
+        miscari[10] = 49;
+        miscari[11] = 48;
+        
+        for (i = 0; i < 12; i++) {
+ 3ec:	01 96       	adiw	r24, 0x01	; 1
+ 3ee:	8c 30       	cpi	r24, 0x0C	; 12
+ 3f0:	91 05       	cpc	r25, r1
+ 3f2:	0c f4       	brge	.+2      	; 0x3f6 <__EEPROM_REGION_LENGTH__+0x1f6>
+ 3f4:	9d cf       	rjmp	.-198    	; 0x330 <__EEPROM_REGION_LENGTH__+0x130>
+            }
+            else {
+                aux[i] = cube[miscari[i]-(move-3)*6];
+            }
+        }
+        shiftVector(dir,3,12,aux);
+ 3f6:	9e 01       	movw	r18, r28
+ 3f8:	2f 5f       	subi	r18, 0xFF	; 255
+ 3fa:	3f 4f       	sbci	r19, 0xFF	; 255
+ 3fc:	4c e0       	ldi	r20, 0x0C	; 12
+ 3fe:	63 e0       	ldi	r22, 0x03	; 3
+ 400:	8e 2d       	mov	r24, r14
+ 402:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+        for (i = 0; i < 12; i++) {
+ 406:	80 e0       	ldi	r24, 0x00	; 0
+ 408:	90 e0       	ldi	r25, 0x00	; 0
+ 40a:	60 c0       	rjmp	.+192    	; 0x4cc <__DATA_REGION_LENGTH__+0xcc>
+            if (i < 3) {
+ 40c:	83 30       	cpi	r24, 0x03	; 3
+ 40e:	91 05       	cpc	r25, r1
+ 410:	dc f4       	brge	.+54     	; 0x448 <__DATA_REGION_LENGTH__+0x48>
+                cube[miscari[i]+move-3] = aux[i];
+ 412:	ed e0       	ldi	r30, 0x0D	; 13
+ 414:	f0 e0       	ldi	r31, 0x00	; 0
+ 416:	ec 0f       	add	r30, r28
+ 418:	fd 1f       	adc	r31, r29
+ 41a:	e8 0f       	add	r30, r24
+ 41c:	f9 1f       	adc	r31, r25
+ 41e:	20 81       	ld	r18, Z
+ 420:	ef 2d       	mov	r30, r15
+ 422:	0f 2c       	mov	r0, r15
+ 424:	00 0c       	add	r0, r0
+ 426:	ff 0b       	sbc	r31, r31
+ 428:	e2 0f       	add	r30, r18
+ 42a:	f1 1d       	adc	r31, r1
+ 42c:	27 fd       	sbrc	r18, 7
+ 42e:	fa 95       	dec	r31
+ 430:	33 97       	sbiw	r30, 0x03	; 3
+ 432:	e0 0f       	add	r30, r16
+ 434:	f1 1f       	adc	r31, r17
+ 436:	a1 e0       	ldi	r26, 0x01	; 1
+ 438:	b0 e0       	ldi	r27, 0x00	; 0
+ 43a:	ac 0f       	add	r26, r28
+ 43c:	bd 1f       	adc	r27, r29
+ 43e:	a8 0f       	add	r26, r24
+ 440:	b9 1f       	adc	r27, r25
+ 442:	2c 91       	ld	r18, X
+ 444:	20 83       	st	Z, r18
+ 446:	41 c0       	rjmp	.+130    	; 0x4ca <__DATA_REGION_LENGTH__+0xca>
+            }
+            else if (6 <= i && i <= 8) {
+ 448:	9c 01       	movw	r18, r24
+ 44a:	26 50       	subi	r18, 0x06	; 6
+ 44c:	31 09       	sbc	r19, r1
+ 44e:	23 30       	cpi	r18, 0x03	; 3
+ 450:	31 05       	cpc	r19, r1
+ 452:	d0 f4       	brcc	.+52     	; 0x488 <__DATA_REGION_LENGTH__+0x88>
+                cube[miscari[i]-move+3] = aux[i];
+ 454:	ed e0       	ldi	r30, 0x0D	; 13
+ 456:	f0 e0       	ldi	r31, 0x00	; 0
+ 458:	ec 0f       	add	r30, r28
+ 45a:	fd 1f       	adc	r31, r29
+ 45c:	e8 0f       	add	r30, r24
+ 45e:	f9 1f       	adc	r31, r25
+ 460:	e0 81       	ld	r30, Z
+ 462:	0e 2e       	mov	r0, r30
+ 464:	00 0c       	add	r0, r0
+ 466:	ff 0b       	sbc	r31, r31
+ 468:	ef 19       	sub	r30, r15
+ 46a:	f1 09       	sbc	r31, r1
+ 46c:	f7 fc       	sbrc	r15, 7
+ 46e:	f3 95       	inc	r31
+ 470:	33 96       	adiw	r30, 0x03	; 3
+ 472:	e0 0f       	add	r30, r16
+ 474:	f1 1f       	adc	r31, r17
+ 476:	a1 e0       	ldi	r26, 0x01	; 1
+ 478:	b0 e0       	ldi	r27, 0x00	; 0
+ 47a:	ac 0f       	add	r26, r28
+ 47c:	bd 1f       	adc	r27, r29
+ 47e:	a8 0f       	add	r26, r24
+ 480:	b9 1f       	adc	r27, r25
+ 482:	2c 91       	ld	r18, X
+ 484:	20 83       	st	Z, r18
+ 486:	21 c0       	rjmp	.+66     	; 0x4ca <__DATA_REGION_LENGTH__+0xca>
+            }
+            else {
+                cube[miscari[i]-(move-3)*6] = aux[i];
+ 488:	ed e0       	ldi	r30, 0x0D	; 13
+ 48a:	f0 e0       	ldi	r31, 0x00	; 0
+ 48c:	ec 0f       	add	r30, r28
+ 48e:	fd 1f       	adc	r31, r29
+ 490:	e8 0f       	add	r30, r24
+ 492:	f9 1f       	adc	r31, r25
+ 494:	40 81       	ld	r20, Z
+ 496:	2f 2d       	mov	r18, r15
+ 498:	0f 2c       	mov	r0, r15
+ 49a:	00 0c       	add	r0, r0
+ 49c:	33 0b       	sbc	r19, r19
+ 49e:	23 50       	subi	r18, 0x03	; 3
+ 4a0:	31 09       	sbc	r19, r1
+ 4a2:	5a ef       	ldi	r21, 0xFA	; 250
+ 4a4:	52 03       	mulsu	r21, r18
+ 4a6:	f0 01       	movw	r30, r0
+ 4a8:	53 9f       	mul	r21, r19
+ 4aa:	f0 0d       	add	r31, r0
+ 4ac:	11 24       	eor	r1, r1
+ 4ae:	e4 0f       	add	r30, r20
+ 4b0:	f1 1d       	adc	r31, r1
+ 4b2:	47 fd       	sbrc	r20, 7
+ 4b4:	fa 95       	dec	r31
+ 4b6:	e0 0f       	add	r30, r16
+ 4b8:	f1 1f       	adc	r31, r17
+ 4ba:	a1 e0       	ldi	r26, 0x01	; 1
+ 4bc:	b0 e0       	ldi	r27, 0x00	; 0
+ 4be:	ac 0f       	add	r26, r28
+ 4c0:	bd 1f       	adc	r27, r29
+ 4c2:	a8 0f       	add	r26, r24
+ 4c4:	b9 1f       	adc	r27, r25
+ 4c6:	2c 91       	ld	r18, X
+ 4c8:	20 83       	st	Z, r18
+            else {
+                aux[i] = cube[miscari[i]-(move-3)*6];
+            }
+        }
+        shiftVector(dir,3,12,aux);
+        for (i = 0; i < 12; i++) {
+ 4ca:	01 96       	adiw	r24, 0x01	; 1
+ 4cc:	8c 30       	cpi	r24, 0x0C	; 12
+ 4ce:	91 05       	cpc	r25, r1
+ 4d0:	0c f4       	brge	.+2      	; 0x4d4 <__DATA_REGION_LENGTH__+0xd4>
+ 4d2:	9c cf       	rjmp	.-200    	; 0x40c <__DATA_REGION_LENGTH__+0xc>
+            }
+            else {
+                cube[miscari[i]-(move-3)*6] = aux[i];
+            }
+        }
+        if (move == 3) {
+ 4d4:	f3 e0       	ldi	r31, 0x03	; 3
+ 4d6:	ff 12       	cpse	r15, r31
+ 4d8:	2a c0       	rjmp	.+84     	; 0x52e <__stack+0x2f>
+            aux[0] = cube[21];
+ 4da:	f8 01       	movw	r30, r16
+ 4dc:	85 89       	ldd	r24, Z+21	; 0x15
+ 4de:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[22];
+ 4e0:	86 89       	ldd	r24, Z+22	; 0x16
+ 4e2:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[23];
+ 4e4:	87 89       	ldd	r24, Z+23	; 0x17
+ 4e6:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[29];
+ 4e8:	85 8d       	ldd	r24, Z+29	; 0x1d
+ 4ea:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[35];
+ 4ec:	83 a1       	ldd	r24, Z+35	; 0x23
+ 4ee:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[34];
+ 4f0:	82 a1       	ldd	r24, Z+34	; 0x22
+ 4f2:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[33];
+ 4f4:	81 a1       	ldd	r24, Z+33	; 0x21
+ 4f6:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[27];
+ 4f8:	83 8d       	ldd	r24, Z+27	; 0x1b
+ 4fa:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 4fc:	9e 01       	movw	r18, r28
+ 4fe:	2f 5f       	subi	r18, 0xFF	; 255
+ 500:	3f 4f       	sbci	r19, 0xFF	; 255
+ 502:	48 e0       	ldi	r20, 0x08	; 8
+ 504:	62 e0       	ldi	r22, 0x02	; 2
+ 506:	8e 2d       	mov	r24, r14
+ 508:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[21] = aux[0];
+ 50c:	89 81       	ldd	r24, Y+1	; 0x01
+ 50e:	f8 01       	movw	r30, r16
+ 510:	85 8b       	std	Z+21, r24	; 0x15
+            cube[22] = aux[1];
+ 512:	8a 81       	ldd	r24, Y+2	; 0x02
+ 514:	86 8b       	std	Z+22, r24	; 0x16
+            cube[23] = aux[2];
+ 516:	8b 81       	ldd	r24, Y+3	; 0x03
+ 518:	87 8b       	std	Z+23, r24	; 0x17
+            cube[29] = aux[3];
+ 51a:	8c 81       	ldd	r24, Y+4	; 0x04
+ 51c:	85 8f       	std	Z+29, r24	; 0x1d
+            cube[35] = aux[4];
+ 51e:	8d 81       	ldd	r24, Y+5	; 0x05
+ 520:	83 a3       	std	Z+35, r24	; 0x23
+            cube[34] = aux[5];
+ 522:	8e 81       	ldd	r24, Y+6	; 0x06
+ 524:	82 a3       	std	Z+34, r24	; 0x22
+            cube[33] = aux[6];
+ 526:	8f 81       	ldd	r24, Y+7	; 0x07
+ 528:	81 a3       	std	Z+33, r24	; 0x21
+            cube[27] = aux[7];
+ 52a:	88 85       	ldd	r24, Y+8	; 0x08
+ 52c:	83 8f       	std	Z+27, r24	; 0x1b
+        }
+        if (move == 5) {
+ 52e:	f5 e0       	ldi	r31, 0x05	; 5
+ 530:	ff 12       	cpse	r15, r31
+ 532:	fa c0       	rjmp	.+500    	; 0x728 <__stack+0x229>
+            aux[0] = cube[5];
+ 534:	f8 01       	movw	r30, r16
+ 536:	85 81       	ldd	r24, Z+5	; 0x05
+ 538:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[4];
+ 53a:	84 81       	ldd	r24, Z+4	; 0x04
+ 53c:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[3];
+ 53e:	83 81       	ldd	r24, Z+3	; 0x03
+ 540:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[9];
+ 542:	81 85       	ldd	r24, Z+9	; 0x09
+ 544:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[15];
+ 546:	87 85       	ldd	r24, Z+15	; 0x0f
+ 548:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[16];
+ 54a:	80 89       	ldd	r24, Z+16	; 0x10
+ 54c:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[17];
+ 54e:	81 89       	ldd	r24, Z+17	; 0x11
+ 550:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[11];
+ 552:	83 85       	ldd	r24, Z+11	; 0x0b
+ 554:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 556:	9e 01       	movw	r18, r28
+ 558:	2f 5f       	subi	r18, 0xFF	; 255
+ 55a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 55c:	48 e0       	ldi	r20, 0x08	; 8
+ 55e:	62 e0       	ldi	r22, 0x02	; 2
+ 560:	8e 2d       	mov	r24, r14
+ 562:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[5] = aux[0];
+ 566:	89 81       	ldd	r24, Y+1	; 0x01
+ 568:	f8 01       	movw	r30, r16
+ 56a:	85 83       	std	Z+5, r24	; 0x05
+            cube[4] = aux[1];
+ 56c:	8a 81       	ldd	r24, Y+2	; 0x02
+ 56e:	84 83       	std	Z+4, r24	; 0x04
+            cube[3] = aux[2];
+ 570:	8b 81       	ldd	r24, Y+3	; 0x03
+ 572:	83 83       	std	Z+3, r24	; 0x03
+            cube[9] = aux[3];
+ 574:	8c 81       	ldd	r24, Y+4	; 0x04
+ 576:	81 87       	std	Z+9, r24	; 0x09
+            cube[15] = aux[4];
+ 578:	8d 81       	ldd	r24, Y+5	; 0x05
+ 57a:	87 87       	std	Z+15, r24	; 0x0f
+            cube[16] = aux[5];
+ 57c:	8e 81       	ldd	r24, Y+6	; 0x06
+ 57e:	80 8b       	std	Z+16, r24	; 0x10
+            cube[17] = aux[6];
+ 580:	8f 81       	ldd	r24, Y+7	; 0x07
+ 582:	81 8b       	std	Z+17, r24	; 0x11
+            cube[11] = aux[7];
+ 584:	88 85       	ldd	r24, Y+8	; 0x08
+ 586:	83 87       	std	Z+11, r24	; 0x0b
+ 588:	cf c0       	rjmp	.+414    	; 0x728 <__stack+0x229>
+        }
+    }
+    //invartim in jurul axey z
+    else {
+        for (i = 0; i < 12; i++) {
+            if (i < 6) {
+ 58a:	86 30       	cpi	r24, 0x06	; 6
+ 58c:	91 05       	cpc	r25, r1
+ 58e:	44 f4       	brge	.+16     	; 0x5a0 <__stack+0xa1>
+                miscari[i] = i;
+ 590:	ed e0       	ldi	r30, 0x0D	; 13
+ 592:	f0 e0       	ldi	r31, 0x00	; 0
+ 594:	ec 0f       	add	r30, r28
+ 596:	fd 1f       	adc	r31, r29
+ 598:	e8 0f       	add	r30, r24
+ 59a:	f9 1f       	adc	r31, r25
+ 59c:	80 83       	st	Z, r24
+ 59e:	09 c0       	rjmp	.+18     	; 0x5b2 <__stack+0xb3>
+            }
+            else {
+                miscari[i] = i+12;
+ 5a0:	ed e0       	ldi	r30, 0x0D	; 13
+ 5a2:	f0 e0       	ldi	r31, 0x00	; 0
+ 5a4:	ec 0f       	add	r30, r28
+ 5a6:	fd 1f       	adc	r31, r29
+ 5a8:	e8 0f       	add	r30, r24
+ 5aa:	f9 1f       	adc	r31, r25
+ 5ac:	2c e0       	ldi	r18, 0x0C	; 12
+ 5ae:	28 0f       	add	r18, r24
+ 5b0:	20 83       	st	Z, r18
+            cube[11] = aux[7];
+        }
+    }
+    //invartim in jurul axey z
+    else {
+        for (i = 0; i < 12; i++) {
+ 5b2:	01 96       	adiw	r24, 0x01	; 1
+ 5b4:	02 c0       	rjmp	.+4      	; 0x5ba <__stack+0xbb>
+ 5b6:	80 e0       	ldi	r24, 0x00	; 0
+ 5b8:	90 e0       	ldi	r25, 0x00	; 0
+ 5ba:	8c 30       	cpi	r24, 0x0C	; 12
+ 5bc:	91 05       	cpc	r25, r1
+ 5be:	2c f3       	brlt	.-54     	; 0x58a <__stack+0x8b>
+ 5c0:	20 e0       	ldi	r18, 0x00	; 0
+ 5c2:	30 e0       	ldi	r19, 0x00	; 0
+ 5c4:	23 c0       	rjmp	.+70     	; 0x60c <__stack+0x10d>
+                miscari[i] = i+12;
+            }
+        }
+        
+        for (i = 0; i < 12; i++) {
+            aux[i] = cube[miscari[i]+(move-6)*6];
+ 5c6:	ed e0       	ldi	r30, 0x0D	; 13
+ 5c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 5ca:	ec 0f       	add	r30, r28
+ 5cc:	fd 1f       	adc	r31, r29
+ 5ce:	e2 0f       	add	r30, r18
+ 5d0:	f3 1f       	adc	r31, r19
+ 5d2:	40 81       	ld	r20, Z
+ 5d4:	8f 2d       	mov	r24, r15
+ 5d6:	0f 2c       	mov	r0, r15
+ 5d8:	00 0c       	add	r0, r0
+ 5da:	99 0b       	sbc	r25, r25
+ 5dc:	06 97       	sbiw	r24, 0x06	; 6
+ 5de:	fc 01       	movw	r30, r24
+ 5e0:	ee 0f       	add	r30, r30
+ 5e2:	ff 1f       	adc	r31, r31
+ 5e4:	e8 0f       	add	r30, r24
+ 5e6:	f9 1f       	adc	r31, r25
+ 5e8:	ee 0f       	add	r30, r30
+ 5ea:	ff 1f       	adc	r31, r31
+ 5ec:	e4 0f       	add	r30, r20
+ 5ee:	f1 1d       	adc	r31, r1
+ 5f0:	47 fd       	sbrc	r20, 7
+ 5f2:	fa 95       	dec	r31
+ 5f4:	e0 0f       	add	r30, r16
+ 5f6:	f1 1f       	adc	r31, r17
+ 5f8:	80 81       	ld	r24, Z
+ 5fa:	e1 e0       	ldi	r30, 0x01	; 1
+ 5fc:	f0 e0       	ldi	r31, 0x00	; 0
+ 5fe:	ec 0f       	add	r30, r28
+ 600:	fd 1f       	adc	r31, r29
+ 602:	e2 0f       	add	r30, r18
+ 604:	f3 1f       	adc	r31, r19
+ 606:	80 83       	st	Z, r24
+            else {
+                miscari[i] = i+12;
+            }
+        }
+        
+        for (i = 0; i < 12; i++) {
+ 608:	2f 5f       	subi	r18, 0xFF	; 255
+ 60a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 60c:	2c 30       	cpi	r18, 0x0C	; 12
+ 60e:	31 05       	cpc	r19, r1
+ 610:	d4 f2       	brlt	.-76     	; 0x5c6 <__stack+0xc7>
+            aux[i] = cube[miscari[i]+(move-6)*6];
+        }
+        shiftVector(dir,3,12,aux);
+ 612:	9e 01       	movw	r18, r28
+ 614:	2f 5f       	subi	r18, 0xFF	; 255
+ 616:	3f 4f       	sbci	r19, 0xFF	; 255
+ 618:	4c e0       	ldi	r20, 0x0C	; 12
+ 61a:	63 e0       	ldi	r22, 0x03	; 3
+ 61c:	8e 2d       	mov	r24, r14
+ 61e:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+        for (i = 0; i < 12; i++) {
+ 622:	20 e0       	ldi	r18, 0x00	; 0
+ 624:	30 e0       	ldi	r19, 0x00	; 0
+ 626:	23 c0       	rjmp	.+70     	; 0x66e <__stack+0x16f>
+            cube[miscari[i]+(move-6)*6] = aux[i];
+ 628:	ed e0       	ldi	r30, 0x0D	; 13
+ 62a:	f0 e0       	ldi	r31, 0x00	; 0
+ 62c:	ec 0f       	add	r30, r28
+ 62e:	fd 1f       	adc	r31, r29
+ 630:	e2 0f       	add	r30, r18
+ 632:	f3 1f       	adc	r31, r19
+ 634:	40 81       	ld	r20, Z
+ 636:	8f 2d       	mov	r24, r15
+ 638:	0f 2c       	mov	r0, r15
+ 63a:	00 0c       	add	r0, r0
+ 63c:	99 0b       	sbc	r25, r25
+ 63e:	06 97       	sbiw	r24, 0x06	; 6
+ 640:	fc 01       	movw	r30, r24
+ 642:	ee 0f       	add	r30, r30
+ 644:	ff 1f       	adc	r31, r31
+ 646:	e8 0f       	add	r30, r24
+ 648:	f9 1f       	adc	r31, r25
+ 64a:	ee 0f       	add	r30, r30
+ 64c:	ff 1f       	adc	r31, r31
+ 64e:	e4 0f       	add	r30, r20
+ 650:	f1 1d       	adc	r31, r1
+ 652:	47 fd       	sbrc	r20, 7
+ 654:	fa 95       	dec	r31
+ 656:	e0 0f       	add	r30, r16
+ 658:	f1 1f       	adc	r31, r17
+ 65a:	a1 e0       	ldi	r26, 0x01	; 1
+ 65c:	b0 e0       	ldi	r27, 0x00	; 0
+ 65e:	ac 0f       	add	r26, r28
+ 660:	bd 1f       	adc	r27, r29
+ 662:	a2 0f       	add	r26, r18
+ 664:	b3 1f       	adc	r27, r19
+ 666:	8c 91       	ld	r24, X
+ 668:	80 83       	st	Z, r24
+        
+        for (i = 0; i < 12; i++) {
+            aux[i] = cube[miscari[i]+(move-6)*6];
+        }
+        shiftVector(dir,3,12,aux);
+        for (i = 0; i < 12; i++) {
+ 66a:	2f 5f       	subi	r18, 0xFF	; 255
+ 66c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 66e:	2c 30       	cpi	r18, 0x0C	; 12
+ 670:	31 05       	cpc	r19, r1
+ 672:	d4 f2       	brlt	.-76     	; 0x628 <__stack+0x129>
+            cube[miscari[i]+(move-6)*6] = aux[i];
+        }
+        
+        if (move == 6) {
+ 674:	f6 e0       	ldi	r31, 0x06	; 6
+ 676:	ff 12       	cpse	r15, r31
+ 678:	2a c0       	rjmp	.+84     	; 0x6ce <__stack+0x1cf>
+            aux[0] = cube[36];
+ 67a:	f8 01       	movw	r30, r16
+ 67c:	84 a1       	ldd	r24, Z+36	; 0x24
+ 67e:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[37];
+ 680:	85 a1       	ldd	r24, Z+37	; 0x25
+ 682:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[38];
+ 684:	86 a1       	ldd	r24, Z+38	; 0x26
+ 686:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[44];
+ 688:	84 a5       	ldd	r24, Z+44	; 0x2c
+ 68a:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[50];
+ 68c:	82 a9       	ldd	r24, Z+50	; 0x32
+ 68e:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[49];
+ 690:	81 a9       	ldd	r24, Z+49	; 0x31
+ 692:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[48];
+ 694:	80 a9       	ldd	r24, Z+48	; 0x30
+ 696:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[42];
+ 698:	82 a5       	ldd	r24, Z+42	; 0x2a
+ 69a:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 69c:	9e 01       	movw	r18, r28
+ 69e:	2f 5f       	subi	r18, 0xFF	; 255
+ 6a0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6a2:	48 e0       	ldi	r20, 0x08	; 8
+ 6a4:	62 e0       	ldi	r22, 0x02	; 2
+ 6a6:	8e 2d       	mov	r24, r14
+ 6a8:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[36] = aux[0];
+ 6ac:	89 81       	ldd	r24, Y+1	; 0x01
+ 6ae:	f8 01       	movw	r30, r16
+ 6b0:	84 a3       	std	Z+36, r24	; 0x24
+            cube[37] = aux[1];
+ 6b2:	8a 81       	ldd	r24, Y+2	; 0x02
+ 6b4:	85 a3       	std	Z+37, r24	; 0x25
+            cube[38] = aux[2];
+ 6b6:	8b 81       	ldd	r24, Y+3	; 0x03
+ 6b8:	86 a3       	std	Z+38, r24	; 0x26
+            cube[44] = aux[3];
+ 6ba:	8c 81       	ldd	r24, Y+4	; 0x04
+ 6bc:	84 a7       	std	Z+44, r24	; 0x2c
+            cube[50] = aux[4];
+ 6be:	8d 81       	ldd	r24, Y+5	; 0x05
+ 6c0:	82 ab       	std	Z+50, r24	; 0x32
+            cube[49] = aux[5];
+ 6c2:	8e 81       	ldd	r24, Y+6	; 0x06
+ 6c4:	81 ab       	std	Z+49, r24	; 0x31
+            cube[48] = aux[6];
+ 6c6:	8f 81       	ldd	r24, Y+7	; 0x07
+ 6c8:	80 ab       	std	Z+48, r24	; 0x30
+            cube[42] = aux[7];
+ 6ca:	88 85       	ldd	r24, Y+8	; 0x08
+ 6cc:	82 a7       	std	Z+42, r24	; 0x2a
+        }
+        if (move == 8) {
+ 6ce:	f8 e0       	ldi	r31, 0x08	; 8
+ 6d0:	ff 12       	cpse	r15, r31
+ 6d2:	2a c0       	rjmp	.+84     	; 0x728 <__stack+0x229>
+            aux[0] = cube[53];
+ 6d4:	f8 01       	movw	r30, r16
+ 6d6:	85 a9       	ldd	r24, Z+53	; 0x35
+ 6d8:	89 83       	std	Y+1, r24	; 0x01
+            aux[1] = cube[47];
+ 6da:	87 a5       	ldd	r24, Z+47	; 0x2f
+ 6dc:	8a 83       	std	Y+2, r24	; 0x02
+            aux[2] = cube[41];
+ 6de:	81 a5       	ldd	r24, Z+41	; 0x29
+ 6e0:	8b 83       	std	Y+3, r24	; 0x03
+            aux[3] = cube[40];
+ 6e2:	80 a5       	ldd	r24, Z+40	; 0x28
+ 6e4:	8c 83       	std	Y+4, r24	; 0x04
+            aux[4] = cube[39];
+ 6e6:	87 a1       	ldd	r24, Z+39	; 0x27
+ 6e8:	8d 83       	std	Y+5, r24	; 0x05
+            aux[5] = cube[45];
+ 6ea:	85 a5       	ldd	r24, Z+45	; 0x2d
+ 6ec:	8e 83       	std	Y+6, r24	; 0x06
+            aux[6] = cube[51];
+ 6ee:	83 a9       	ldd	r24, Z+51	; 0x33
+ 6f0:	8f 83       	std	Y+7, r24	; 0x07
+            aux[7] = cube[52];
+ 6f2:	84 a9       	ldd	r24, Z+52	; 0x34
+ 6f4:	88 87       	std	Y+8, r24	; 0x08
+            shiftVector(dir,2,8,aux);
+ 6f6:	9e 01       	movw	r18, r28
+ 6f8:	2f 5f       	subi	r18, 0xFF	; 255
+ 6fa:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6fc:	48 e0       	ldi	r20, 0x08	; 8
+ 6fe:	62 e0       	ldi	r22, 0x02	; 2
+ 700:	8e 2d       	mov	r24, r14
+ 702:	0e 94 44 06 	call	0xc88	; 0xc88 <shiftVector>
+            cube[53] = aux[0];
+ 706:	89 81       	ldd	r24, Y+1	; 0x01
+ 708:	f8 01       	movw	r30, r16
+ 70a:	85 ab       	std	Z+53, r24	; 0x35
+            cube[47] = aux[1];
+ 70c:	8a 81       	ldd	r24, Y+2	; 0x02
+ 70e:	87 a7       	std	Z+47, r24	; 0x2f
+            cube[41] = aux[2];
+ 710:	8b 81       	ldd	r24, Y+3	; 0x03
+ 712:	81 a7       	std	Z+41, r24	; 0x29
+            cube[40] = aux[3];
+ 714:	8c 81       	ldd	r24, Y+4	; 0x04
+ 716:	80 a7       	std	Z+40, r24	; 0x28
+            cube[39] = aux[4];
+ 718:	8d 81       	ldd	r24, Y+5	; 0x05
+ 71a:	87 a3       	std	Z+39, r24	; 0x27
+            cube[45] = aux[5];
+ 71c:	8e 81       	ldd	r24, Y+6	; 0x06
+ 71e:	85 a7       	std	Z+45, r24	; 0x2d
+            cube[51] = aux[6];
+ 720:	8f 81       	ldd	r24, Y+7	; 0x07
+ 722:	83 ab       	std	Z+51, r24	; 0x33
+            cube[52] = aux[7];
+ 724:	88 85       	ldd	r24, Y+8	; 0x08
+ 726:	84 ab       	std	Z+52, r24	; 0x34
+        }
+    }
+}
+ 728:	68 96       	adiw	r28, 0x18	; 24
+ 72a:	0f b6       	in	r0, 0x3f	; 63
+ 72c:	f8 94       	cli
+ 72e:	de bf       	out	0x3e, r29	; 62
+ 730:	0f be       	out	0x3f, r0	; 63
+ 732:	cd bf       	out	0x3d, r28	; 61
+ 734:	df 91       	pop	r29
+ 736:	cf 91       	pop	r28
+ 738:	1f 91       	pop	r17
+ 73a:	0f 91       	pop	r16
+ 73c:	ff 90       	pop	r15
+ 73e:	ef 90       	pop	r14
+ 740:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000b14 <main>:
+    printf("\n");
+}
+*/
+
+void main(void)
+{
+ b14:	cf 93       	push	r28
+ b16:	df 93       	push	r29
+ b18:	cd b7       	in	r28, 0x3d	; 61
+ b1a:	de b7       	in	r29, 0x3e	; 62
+ b1c:	c2 50       	subi	r28, 0x02	; 2
+ b1e:	d1 40       	sbci	r29, 0x01	; 1
+ b20:	0f b6       	in	r0, 0x3f	; 63
+ b22:	f8 94       	cli
+ b24:	de bf       	out	0x3e, r29	; 62
+ b26:	0f be       	out	0x3f, r0	; 63
+ b28:	cd bf       	out	0x3d, r28	; 61
+    int i, j;
+    int8_t bits[144];
+    int8_t cube[54];
+    int8_t moves[60];
+    
+    initCube(cube);
+ b2a:	ce 01       	movw	r24, r28
+ b2c:	8f 56       	subi	r24, 0x6F	; 111
+ b2e:	9f 4f       	sbci	r25, 0xFF	; 255
+ b30:	0e 94 ef 07 	call	0xfde	; 0xfde <initCube>
+    
+    // Crystal Oscillator division factor: 1
+    #pragma optsize-
+    CLKPR=(1<<CLKPCE);
+ b34:	e1 e6       	ldi	r30, 0x61	; 97
+ b36:	f0 e0       	ldi	r31, 0x00	; 0
+ b38:	80 e8       	ldi	r24, 0x80	; 128
+ b3a:	80 83       	st	Z, r24
+    CLKPR=(0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);
+ b3c:	10 82       	st	Z, r1
+    #endif
+
+    // Input/Output Ports initialization
+    // Port A initialization
+    // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0=Out
+    DDRA=(1<<DDA7) | (1<<DDA6) | (1<<DDA5) | (1<<DDA4) | (1<<DDA3) | (1<<DDA2) | (1<<DDA1) | (1<<DDA0);
+ b3e:	9f ef       	ldi	r25, 0xFF	; 255
+ b40:	91 b9       	out	0x01, r25	; 1
+    // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+
+    // Port B initialization
+    // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+    DDRB=(0<<DDB7) | (0<<DDB6) | (0<<DDB5) | (0<<DDB4) | (0<<DDB3) | (0<<DDB2) | (0<<DDB1) | (0<<DDB0);
+ b42:	14 b8       	out	0x04, r1	; 4
+    // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+
+    // Port C initialization
+    // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=Out
+    DDRC=(1<<DDC7) | (1<<DDC6) | (1<<DDC5) | (1<<DDC4) | (1<<DDC3) | (1<<DDC2) | (1<<DDC1) | (1<<DDC0);
+ b44:	97 b9       	out	0x07, r25	; 7
+    // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=0
+
+    // Port D initialization
+    // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+    DDRD=(0<<DDD7) | (0<<DDD6) | (0<<DDD5) | (0<<DDD4) | (0<<DDD3) | (0<<DDD2) | (0<<DDD1) | (0<<DDD0);
+ b46:	1a b8       	out	0x0a, r1	; 10
+    // Clock source: System Clock
+    // Clock value: Timer 0 Stopped
+    // Mode: Normal top=0xFF
+    // OC0A output: Disconnected
+    // OC0B output: Disconnected
+    TCCR0A=(0<<COM0A1) | (0<<COM0A0) | (0<<COM0B1) | (0<<COM0B0) | (0<<WGM01) | (0<<WGM00);
+ b48:	14 bc       	out	0x24, r1	; 36
+    TCCR0B=(0<<WGM02) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+ b4a:	15 bc       	out	0x25, r1	; 37
+    TCNT0=0x00;
+ b4c:	16 bc       	out	0x26, r1	; 38
+    OCR0A=0x00;
+ b4e:	17 bc       	out	0x27, r1	; 39
+    OCR0B=0x00;
+ b50:	18 bc       	out	0x28, r1	; 40
+    // Input Capture on Falling Edge
+    // Timer1 Overflow Interrupt: Off
+    // Input Capture Interrupt: Off
+    // Compare A Match Interrupt: Off
+    // Compare B Match Interrupt: Off
+    TCCR1A=(0<<COM1A1) | (0<<COM1A0) | (0<<COM1B1) | (0<<COM1B0) | (0<<WGM11) | (0<<WGM10);
+ b52:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <__TEXT_REGION_LENGTH__+0x7fc080>
+    TCCR1B=(0<<ICNC1) | (0<<ICES1) | (0<<WGM13) | (0<<WGM12) | (0<<CS12) | (0<<CS11) | (0<<CS10);
+ b56:	10 92 81 00 	sts	0x0081, r1	; 0x800081 <__TEXT_REGION_LENGTH__+0x7fc081>
+    TCNT1H=0x00;
+ b5a:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7fc085>
+    TCNT1L=0x00;
+ b5e:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7fc084>
+    ICR1H=0x00;
+ b62:	10 92 87 00 	sts	0x0087, r1	; 0x800087 <__TEXT_REGION_LENGTH__+0x7fc087>
+    ICR1L=0x00;
+ b66:	10 92 86 00 	sts	0x0086, r1	; 0x800086 <__TEXT_REGION_LENGTH__+0x7fc086>
+    OCR1AH=0x00;
+ b6a:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7fc089>
+    OCR1AL=0x00;
+ b6e:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <__TEXT_REGION_LENGTH__+0x7fc088>
+    OCR1BH=0x00;
+ b72:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__TEXT_REGION_LENGTH__+0x7fc08b>
+    OCR1BL=0x00;
+ b76:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__TEXT_REGION_LENGTH__+0x7fc08a>
+    // Clock source: System Clock
+    // Clock value: Timer2 Stopped
+    // Mode: Normal top=0xFF
+    // OC2A output: Disconnected
+    // OC2B output: Disconnected
+    ASSR=(0<<EXCLK) | (0<<AS2);
+ b7a:	10 92 b6 00 	sts	0x00B6, r1	; 0x8000b6 <__TEXT_REGION_LENGTH__+0x7fc0b6>
+    TCCR2A=(0<<COM2A1) | (0<<COM2A0) | (0<<COM2B1) | (0<<COM2B0) | (0<<WGM21) | (0<<WGM20);
+ b7e:	10 92 b0 00 	sts	0x00B0, r1	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7fc0b0>
+    TCCR2B=(0<<WGM22) | (0<<CS22) | (0<<CS21) | (0<<CS20);
+ b82:	10 92 b1 00 	sts	0x00B1, r1	; 0x8000b1 <__TEXT_REGION_LENGTH__+0x7fc0b1>
+    TCNT2=0x00;
+ b86:	10 92 b2 00 	sts	0x00B2, r1	; 0x8000b2 <__TEXT_REGION_LENGTH__+0x7fc0b2>
+    OCR2A=0x00;
+ b8a:	10 92 b3 00 	sts	0x00B3, r1	; 0x8000b3 <__TEXT_REGION_LENGTH__+0x7fc0b3>
+    OCR2B=0x00;
+ b8e:	10 92 b4 00 	sts	0x00B4, r1	; 0x8000b4 <__TEXT_REGION_LENGTH__+0x7fc0b4>
+
+    // Timer/Counter 0 Interrupt(s) initialization
+    TIMSK0=(0<<OCIE0B) | (0<<OCIE0A) | (0<<TOIE0);
+ b92:	10 92 6e 00 	sts	0x006E, r1	; 0x80006e <__TEXT_REGION_LENGTH__+0x7fc06e>
+
+    // Timer/Counter 1 Interrupt(s) initialization
+    TIMSK1=(0<<ICIE1) | (0<<OCIE1B) | (0<<OCIE1A) | (0<<TOIE1);
+ b96:	10 92 6f 00 	sts	0x006F, r1	; 0x80006f <__TEXT_REGION_LENGTH__+0x7fc06f>
+
+    // Timer/Counter 2 Interrupt(s) initialization
+    TIMSK2=(0<<OCIE2B) | (0<<OCIE2A) | (0<<TOIE2);
+ b9a:	10 92 70 00 	sts	0x0070, r1	; 0x800070 <__TEXT_REGION_LENGTH__+0x7fc070>
+    // INT2: Off
+    // Interrupt on any change on pins PCINT0-7: Off
+    // Interrupt on any change on pins PCINT8-15: Off
+    // Interrupt on any change on pins PCINT16-23: Off
+    // Interrupt on any change on pins PCINT24-31: Off
+    EICRA=(0<<ISC21) | (0<<ISC20) | (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+ b9e:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <__TEXT_REGION_LENGTH__+0x7fc069>
+    EIMSK=(0<<INT2) | (0<<INT1) | (0<<INT0);
+ ba2:	1d ba       	out	0x1d, r1	; 29
+    PCICR=(0<<PCIE3) | (0<<PCIE2) | (0<<PCIE1) | (0<<PCIE0);
+ ba4:	10 92 68 00 	sts	0x0068, r1	; 0x800068 <__TEXT_REGION_LENGTH__+0x7fc068>
+
+    // USART0 initialization
+    // USART0 disabled
+    UCSR0B=(0<<RXCIE0) | (0<<TXCIE0) | (0<<UDRIE0) | (0<<RXEN0) | (0<<TXEN0) | (0<<UCSZ02) | (0<<RXB80) | (0<<TXB80);
+ ba8:	10 92 c1 00 	sts	0x00C1, r1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7fc0c1>
+
+    // USART1 initialization
+    // USART1 disabled
+    UCSR1B=(0<<RXCIE1) | (0<<TXCIE1) | (0<<UDRIE1) | (0<<RXEN1) | (0<<TXEN1) | (0<<UCSZ12) | (0<<RXB81) | (0<<TXB81);
+ bac:	10 92 c9 00 	sts	0x00C9, r1	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7fc0c9>
+    // Analog Comparator: Off
+    // The Analog Comparator's positive input is
+    // connected to the AIN0 pin
+    // The Analog Comparator's negative input is
+    // connected to the AIN1 pin
+    ACSR=(1<<ACD) | (0<<ACBG) | (0<<ACO) | (0<<ACI) | (0<<ACIE) | (0<<ACIC) | (0<<ACIS1) | (0<<ACIS0);
+ bb0:	80 bf       	out	0x30, r24	; 48
+    ADCSRB=(0<<ACME);
+ bb2:	10 92 7b 00 	sts	0x007B, r1	; 0x80007b <__TEXT_REGION_LENGTH__+0x7fc07b>
+    // Digital input buffer on AIN0: On
+    // Digital input buffer on AIN1: On
+    DIDR1=(0<<AIN0D) | (0<<AIN1D);
+ bb6:	10 92 7f 00 	sts	0x007F, r1	; 0x80007f <__TEXT_REGION_LENGTH__+0x7fc07f>
+
+    // ADC initialization
+    // ADC disabled
+    ADCSRA=(0<<ADEN) | (0<<ADSC) | (0<<ADATE) | (0<<ADIF) | (0<<ADIE) | (0<<ADPS2) | (0<<ADPS1) | (0<<ADPS0);
+ bba:	10 92 7a 00 	sts	0x007A, r1	; 0x80007a <__TEXT_REGION_LENGTH__+0x7fc07a>
+
+    // SPI initialization
+    // SPI disabled
+    SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<SPR1) | (0<<SPR0);
+ bbe:	1c bc       	out	0x2c, r1	; 44
+
+    // TWI initialization
+    // TWI disabled
+    TWCR=(0<<TWEA) | (0<<TWSTA) | (0<<TWSTO) | (0<<TWEN) | (0<<TWIE);
+ bc0:	10 92 bc 00 	sts	0x00BC, r1	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7fc0bc>
+    
+    while (1)   {
+        srand(rand());
+ bc4:	0e 94 8d 07 	call	0xf1a	; 0xf1a <rand>
+ bc8:	0e 94 92 07 	call	0xf24	; 0xf24 <srand>
+        initCube(cube);
+ bcc:	ce 01       	movw	r24, r28
+ bce:	8f 56       	subi	r24, 0x6F	; 111
+ bd0:	9f 4f       	sbci	r25, 0xFF	; 255
+ bd2:	0e 94 ef 07 	call	0xfde	; 0xfde <initCube>
+        displayCube(cube, bits);
+ bd6:	be 01       	movw	r22, r28
+ bd8:	6f 5f       	subi	r22, 0xFF	; 255
+ bda:	7f 4f       	sbci	r23, 0xFF	; 255
+ bdc:	ce 01       	movw	r24, r28
+ bde:	8f 56       	subi	r24, 0x6F	; 111
+ be0:	9f 4f       	sbci	r25, 0xFF	; 255
+ be2:	0e 94 e5 06 	call	0xdca	; 0xdca <displayCube>
+        _delay_s(1);
+ be6:	81 e0       	ldi	r24, 0x01	; 1
+ be8:	90 e0       	ldi	r25, 0x00	; 0
+ bea:	0e 94 4e 08 	call	0x109c	; 0x109c <_delay_s>
+        
+        //shuffle the cube
+        for (i = 0; i < 60; i++) {
+ bee:	00 e0       	ldi	r16, 0x00	; 0
+ bf0:	10 e0       	ldi	r17, 0x00	; 0
+ bf2:	16 c0       	rjmp	.+44     	; 0xc20 <main+0x10c>
+            moves[i] = rand()%9;
+ bf4:	0e 94 8d 07 	call	0xf1a	; 0xf1a <rand>
+ bf8:	69 e0       	ldi	r22, 0x09	; 9
+ bfa:	70 e0       	ldi	r23, 0x00	; 0
+ bfc:	0e 94 7e 08 	call	0x10fc	; 0x10fc <__divmodhi4>
+ c00:	e7 ec       	ldi	r30, 0xC7	; 199
+ c02:	f0 e0       	ldi	r31, 0x00	; 0
+ c04:	ec 0f       	add	r30, r28
+ c06:	fd 1f       	adc	r31, r29
+ c08:	e0 0f       	add	r30, r16
+ c0a:	f1 1f       	adc	r31, r17
+ c0c:	80 83       	st	Z, r24
+            doMove(1,moves[i],cube);
+ c0e:	ae 01       	movw	r20, r28
+ c10:	4f 56       	subi	r20, 0x6F	; 111
+ c12:	5f 4f       	sbci	r21, 0xFF	; 255
+ c14:	68 2f       	mov	r22, r24
+ c16:	81 e0       	ldi	r24, 0x01	; 1
+ c18:	0e 94 6c 00 	call	0xd8	; 0xd8 <_etext>
+        initCube(cube);
+        displayCube(cube, bits);
+        _delay_s(1);
+        
+        //shuffle the cube
+        for (i = 0; i < 60; i++) {
+ c1c:	0f 5f       	subi	r16, 0xFF	; 255
+ c1e:	1f 4f       	sbci	r17, 0xFF	; 255
+ c20:	0c 33       	cpi	r16, 0x3C	; 60
+ c22:	11 05       	cpc	r17, r1
+ c24:	3c f3       	brlt	.-50     	; 0xbf4 <main+0xe0>
+            moves[i] = rand()%9;
+            doMove(1,moves[i],cube);
+        }
+        displayCube(cube,bits);
+ c26:	be 01       	movw	r22, r28
+ c28:	6f 5f       	subi	r22, 0xFF	; 255
+ c2a:	7f 4f       	sbci	r23, 0xFF	; 255
+ c2c:	ce 01       	movw	r24, r28
+ c2e:	8f 56       	subi	r24, 0x6F	; 111
+ c30:	9f 4f       	sbci	r25, 0xFF	; 255
+ c32:	0e 94 e5 06 	call	0xdca	; 0xdca <displayCube>
+        _delay_s(1);
+ c36:	81 e0       	ldi	r24, 0x01	; 1
+ c38:	90 e0       	ldi	r25, 0x00	; 0
+ c3a:	0e 94 4e 08 	call	0x109c	; 0x109c <_delay_s>
+        
+        //unshuffle the cube
+        for (i = 59; i >= 0; i--) {
+ c3e:	0b e3       	ldi	r16, 0x3B	; 59
+ c40:	10 e0       	ldi	r17, 0x00	; 0
+ c42:	1b c0       	rjmp	.+54     	; 0xc7a <main+0x166>
+            doMove(-1,moves[i],cube);
+ c44:	e7 ec       	ldi	r30, 0xC7	; 199
+ c46:	f0 e0       	ldi	r31, 0x00	; 0
+ c48:	ec 0f       	add	r30, r28
+ c4a:	fd 1f       	adc	r31, r29
+ c4c:	e0 0f       	add	r30, r16
+ c4e:	f1 1f       	adc	r31, r17
+ c50:	ae 01       	movw	r20, r28
+ c52:	4f 56       	subi	r20, 0x6F	; 111
+ c54:	5f 4f       	sbci	r21, 0xFF	; 255
+ c56:	60 81       	ld	r22, Z
+ c58:	8f ef       	ldi	r24, 0xFF	; 255
+ c5a:	0e 94 6c 00 	call	0xd8	; 0xd8 <_etext>
+            displayCube(cube,bits);
+ c5e:	be 01       	movw	r22, r28
+ c60:	6f 5f       	subi	r22, 0xFF	; 255
+ c62:	7f 4f       	sbci	r23, 0xFF	; 255
+ c64:	ce 01       	movw	r24, r28
+ c66:	8f 56       	subi	r24, 0x6F	; 111
+ c68:	9f 4f       	sbci	r25, 0xFF	; 255
+ c6a:	0e 94 e5 06 	call	0xdca	; 0xdca <displayCube>
+            _delay_s(1);
+ c6e:	81 e0       	ldi	r24, 0x01	; 1
+ c70:	90 e0       	ldi	r25, 0x00	; 0
+ c72:	0e 94 4e 08 	call	0x109c	; 0x109c <_delay_s>
+        }
+        displayCube(cube,bits);
+        _delay_s(1);
+        
+        //unshuffle the cube
+        for (i = 59; i >= 0; i--) {
+ c76:	01 50       	subi	r16, 0x01	; 1
+ c78:	11 09       	sbc	r17, r1
+ c7a:	11 23       	and	r17, r17
+ c7c:	1c f7       	brge	.-58     	; 0xc44 <main+0x130>
+            doMove(-1,moves[i],cube);
+            displayCube(cube,bits);
+            _delay_s(1);
+        }
+        
+        _delay_s(30);
+ c7e:	8e e1       	ldi	r24, 0x1E	; 30
+ c80:	90 e0       	ldi	r25, 0x00	; 0
+ c82:	0e 94 4e 08 	call	0x109c	; 0x109c <_delay_s>
+    }
+ c86:	9e cf       	rjmp	.-196    	; 0xbc4 <main+0xb0>
+
+Disassembly of section .text.libgcc.div:
+
+000010fc <__divmodhi4>:
+    10fc:	97 fb       	bst	r25, 7
+    10fe:	07 2e       	mov	r0, r23
+    1100:	16 f4       	brtc	.+4      	; 0x1106 <__divmodhi4+0xa>
+    1102:	00 94       	com	r0
+    1104:	07 d0       	rcall	.+14     	; 0x1114 <__divmodhi4_neg1>
+    1106:	77 fd       	sbrc	r23, 7
+    1108:	09 d0       	rcall	.+18     	; 0x111c <__divmodhi4_neg2>
+    110a:	0e 94 92 08 	call	0x1124	; 0x1124 <__udivmodhi4>
+    110e:	07 fc       	sbrc	r0, 7
+    1110:	05 d0       	rcall	.+10     	; 0x111c <__divmodhi4_neg2>
+    1112:	3e f4       	brtc	.+14     	; 0x1122 <__divmodhi4_exit>
+
+00001114 <__divmodhi4_neg1>:
+    1114:	90 95       	com	r25
+    1116:	81 95       	neg	r24
+    1118:	9f 4f       	sbci	r25, 0xFF	; 255
+    111a:	08 95       	ret
+
+0000111c <__divmodhi4_neg2>:
+    111c:	70 95       	com	r23
+    111e:	61 95       	neg	r22
+    1120:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001122 <__divmodhi4_exit>:
+    1122:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00001124 <__udivmodhi4>:
+    1124:	aa 1b       	sub	r26, r26
+    1126:	bb 1b       	sub	r27, r27
+    1128:	51 e1       	ldi	r21, 0x11	; 17
+    112a:	07 c0       	rjmp	.+14     	; 0x113a <__udivmodhi4_ep>
+
+0000112c <__udivmodhi4_loop>:
+    112c:	aa 1f       	adc	r26, r26
+    112e:	bb 1f       	adc	r27, r27
+    1130:	a6 17       	cp	r26, r22
+    1132:	b7 07       	cpc	r27, r23
+    1134:	10 f0       	brcs	.+4      	; 0x113a <__udivmodhi4_ep>
+    1136:	a6 1b       	sub	r26, r22
+    1138:	b7 0b       	sbc	r27, r23
+
+0000113a <__udivmodhi4_ep>:
+    113a:	88 1f       	adc	r24, r24
+    113c:	99 1f       	adc	r25, r25
+    113e:	5a 95       	dec	r21
+    1140:	a9 f7       	brne	.-22     	; 0x112c <__udivmodhi4_loop>
+    1142:	80 95       	com	r24
+    1144:	90 95       	com	r25
+    1146:	bc 01       	movw	r22, r24
+    1148:	cd 01       	movw	r24, r26
+    114a:	08 95       	ret
+
+Disassembly of section .text.avrlibc:
+
+00000e82 <do_rand>:
+ e82:	8f 92       	push	r8
+ e84:	9f 92       	push	r9
+ e86:	af 92       	push	r10
+ e88:	bf 92       	push	r11
+ e8a:	cf 92       	push	r12
+ e8c:	df 92       	push	r13
+ e8e:	ef 92       	push	r14
+ e90:	ff 92       	push	r15
+ e92:	cf 93       	push	r28
+ e94:	df 93       	push	r29
+ e96:	ec 01       	movw	r28, r24
+ e98:	68 81       	ld	r22, Y
+ e9a:	79 81       	ldd	r23, Y+1	; 0x01
+ e9c:	8a 81       	ldd	r24, Y+2	; 0x02
+ e9e:	9b 81       	ldd	r25, Y+3	; 0x03
+ ea0:	61 15       	cp	r22, r1
+ ea2:	71 05       	cpc	r23, r1
+ ea4:	81 05       	cpc	r24, r1
+ ea6:	91 05       	cpc	r25, r1
+ ea8:	21 f4       	brne	.+8      	; 0xeb2 <do_rand+0x30>
+ eaa:	64 e2       	ldi	r22, 0x24	; 36
+ eac:	79 ed       	ldi	r23, 0xD9	; 217
+ eae:	8b e5       	ldi	r24, 0x5B	; 91
+ eb0:	97 e0       	ldi	r25, 0x07	; 7
+ eb2:	2d e1       	ldi	r18, 0x1D	; 29
+ eb4:	33 ef       	ldi	r19, 0xF3	; 243
+ eb6:	41 e0       	ldi	r20, 0x01	; 1
+ eb8:	50 e0       	ldi	r21, 0x00	; 0
+ eba:	0e 94 67 08 	call	0x10ce	; 0x10ce <__divmodsi4>
+ ebe:	49 01       	movw	r8, r18
+ ec0:	5a 01       	movw	r10, r20
+ ec2:	9b 01       	movw	r18, r22
+ ec4:	ac 01       	movw	r20, r24
+ ec6:	a7 ea       	ldi	r26, 0xA7	; 167
+ ec8:	b1 e4       	ldi	r27, 0x41	; 65
+ eca:	0e 94 e9 08 	call	0x11d2	; 0x11d2 <__muluhisi3>
+ ece:	6b 01       	movw	r12, r22
+ ed0:	7c 01       	movw	r14, r24
+ ed2:	ac ee       	ldi	r26, 0xEC	; 236
+ ed4:	b4 ef       	ldi	r27, 0xF4	; 244
+ ed6:	a5 01       	movw	r20, r10
+ ed8:	94 01       	movw	r18, r8
+ eda:	0e 94 0f 09 	call	0x121e	; 0x121e <__mulohisi3>
+ ede:	dc 01       	movw	r26, r24
+ ee0:	cb 01       	movw	r24, r22
+ ee2:	8c 0d       	add	r24, r12
+ ee4:	9d 1d       	adc	r25, r13
+ ee6:	ae 1d       	adc	r26, r14
+ ee8:	bf 1d       	adc	r27, r15
+ eea:	b7 ff       	sbrs	r27, 7
+ eec:	03 c0       	rjmp	.+6      	; 0xef4 <do_rand+0x72>
+ eee:	01 97       	sbiw	r24, 0x01	; 1
+ ef0:	a1 09       	sbc	r26, r1
+ ef2:	b0 48       	sbci	r27, 0x80	; 128
+ ef4:	88 83       	st	Y, r24
+ ef6:	99 83       	std	Y+1, r25	; 0x01
+ ef8:	aa 83       	std	Y+2, r26	; 0x02
+ efa:	bb 83       	std	Y+3, r27	; 0x03
+ efc:	9f 77       	andi	r25, 0x7F	; 127
+ efe:	df 91       	pop	r29
+ f00:	cf 91       	pop	r28
+ f02:	ff 90       	pop	r15
+ f04:	ef 90       	pop	r14
+ f06:	df 90       	pop	r13
+ f08:	cf 90       	pop	r12
+ f0a:	bf 90       	pop	r11
+ f0c:	af 90       	pop	r10
+ f0e:	9f 90       	pop	r9
+ f10:	8f 90       	pop	r8
+ f12:	08 95       	ret
+
+00000f14 <rand_r>:
+ f14:	0e 94 41 07 	call	0xe82	; 0xe82 <do_rand>
+ f18:	08 95       	ret
+
+00000f1a <rand>:
+ f1a:	80 e0       	ldi	r24, 0x00	; 0
+ f1c:	91 e0       	ldi	r25, 0x01	; 1
+ f1e:	0e 94 41 07 	call	0xe82	; 0xe82 <do_rand>
+ f22:	08 95       	ret
+
+00000f24 <srand>:
+ f24:	a0 e0       	ldi	r26, 0x00	; 0
+ f26:	b0 e0       	ldi	r27, 0x00	; 0
+ f28:	e0 e0       	ldi	r30, 0x00	; 0
+ f2a:	f1 e0       	ldi	r31, 0x01	; 1
+ f2c:	80 83       	st	Z, r24
+ f2e:	91 83       	std	Z+1, r25	; 0x01
+ f30:	a2 83       	std	Z+2, r26	; 0x02
+ f32:	b3 83       	std	Z+3, r27	; 0x03
+ f34:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+000010ce <__divmodsi4>:
+    10ce:	05 2e       	mov	r0, r21
+    10d0:	97 fb       	bst	r25, 7
+    10d2:	1e f4       	brtc	.+6      	; 0x10da <__divmodsi4+0xc>
+    10d4:	00 94       	com	r0
+    10d6:	0e 94 04 09 	call	0x1208	; 0x1208 <__negsi2>
+    10da:	57 fd       	sbrc	r21, 7
+    10dc:	07 d0       	rcall	.+14     	; 0x10ec <__divmodsi4_neg2>
+    10de:	0e 94 2c 08 	call	0x1058	; 0x1058 <__udivmodsi4>
+    10e2:	07 fc       	sbrc	r0, 7
+    10e4:	03 d0       	rcall	.+6      	; 0x10ec <__divmodsi4_neg2>
+    10e6:	4e f4       	brtc	.+18     	; 0x10fa <__divmodsi4_exit>
+    10e8:	0c 94 04 09 	jmp	0x1208	; 0x1208 <__negsi2>
+
+000010ec <__divmodsi4_neg2>:
+    10ec:	50 95       	com	r21
+    10ee:	40 95       	com	r20
+    10f0:	30 95       	com	r19
+    10f2:	21 95       	neg	r18
+    10f4:	3f 4f       	sbci	r19, 0xFF	; 255
+    10f6:	4f 4f       	sbci	r20, 0xFF	; 255
+    10f8:	5f 4f       	sbci	r21, 0xFF	; 255
+
+000010fa <__divmodsi4_exit>:
+    10fa:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00001208 <__negsi2>:
+    1208:	90 95       	com	r25
+    120a:	80 95       	com	r24
+    120c:	70 95       	com	r23
+    120e:	61 95       	neg	r22
+    1210:	7f 4f       	sbci	r23, 0xFF	; 255
+    1212:	8f 4f       	sbci	r24, 0xFF	; 255
+    1214:	9f 4f       	sbci	r25, 0xFF	; 255
+    1216:	08 95       	ret
+
+Disassembly of section .text.libgcc.mul:
+
+000011d2 <__muluhisi3>:
+    11d2:	0e 94 a6 08 	call	0x114c	; 0x114c <__umulhisi3>
+    11d6:	a5 9f       	mul	r26, r21
+    11d8:	90 0d       	add	r25, r0
+    11da:	b4 9f       	mul	r27, r20
+    11dc:	90 0d       	add	r25, r0
+    11de:	a4 9f       	mul	r26, r20
+    11e0:	80 0d       	add	r24, r0
+    11e2:	91 1d       	adc	r25, r1
+    11e4:	11 24       	eor	r1, r1
+    11e6:	08 95       	ret
+
+Disassembly of section .text.libgcc.mul:
+
+00001218 <__mulshisi3>:
+    1218:	b7 ff       	sbrs	r27, 7
+    121a:	0c 94 e9 08 	jmp	0x11d2	; 0x11d2 <__muluhisi3>
+
+0000121e <__mulohisi3>:
+    121e:	0e 94 e9 08 	call	0x11d2	; 0x11d2 <__muluhisi3>
+    1222:	82 1b       	sub	r24, r18
+    1224:	93 0b       	sbc	r25, r19
+    1226:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00001058 <__udivmodsi4>:
+    1058:	a1 e2       	ldi	r26, 0x21	; 33
+    105a:	1a 2e       	mov	r1, r26
+    105c:	aa 1b       	sub	r26, r26
+    105e:	bb 1b       	sub	r27, r27
+    1060:	fd 01       	movw	r30, r26
+    1062:	0d c0       	rjmp	.+26     	; 0x107e <__udivmodsi4_ep>
+
+00001064 <__udivmodsi4_loop>:
+    1064:	aa 1f       	adc	r26, r26
+    1066:	bb 1f       	adc	r27, r27
+    1068:	ee 1f       	adc	r30, r30
+    106a:	ff 1f       	adc	r31, r31
+    106c:	a2 17       	cp	r26, r18
+    106e:	b3 07       	cpc	r27, r19
+    1070:	e4 07       	cpc	r30, r20
+    1072:	f5 07       	cpc	r31, r21
+    1074:	20 f0       	brcs	.+8      	; 0x107e <__udivmodsi4_ep>
+    1076:	a2 1b       	sub	r26, r18
+    1078:	b3 0b       	sbc	r27, r19
+    107a:	e4 0b       	sbc	r30, r20
+    107c:	f5 0b       	sbc	r31, r21
+
+0000107e <__udivmodsi4_ep>:
+    107e:	66 1f       	adc	r22, r22
+    1080:	77 1f       	adc	r23, r23
+    1082:	88 1f       	adc	r24, r24
+    1084:	99 1f       	adc	r25, r25
+    1086:	1a 94       	dec	r1
+    1088:	69 f7       	brne	.-38     	; 0x1064 <__udivmodsi4_loop>
+    108a:	60 95       	com	r22
+    108c:	70 95       	com	r23
+    108e:	80 95       	com	r24
+    1090:	90 95       	com	r25
+    1092:	9b 01       	movw	r18, r22
+    1094:	ac 01       	movw	r20, r24
+    1096:	bd 01       	movw	r22, r26
+    1098:	cf 01       	movw	r24, r30
+    109a:	08 95       	ret
+
+Disassembly of section .text.libgcc.mul:
+
+0000114c <__umulhisi3>:
+    114c:	a2 9f       	mul	r26, r18
+    114e:	b0 01       	movw	r22, r0
+    1150:	b3 9f       	mul	r27, r19
+    1152:	c0 01       	movw	r24, r0
+    1154:	a3 9f       	mul	r26, r19
+    1156:	70 0d       	add	r23, r0
+    1158:	81 1d       	adc	r24, r1
+    115a:	11 24       	eor	r1, r1
+    115c:	91 1d       	adc	r25, r1
+    115e:	b2 9f       	mul	r27, r18
+    1160:	70 0d       	add	r23, r0
+    1162:	81 1d       	adc	r24, r1
+    1164:	11 24       	eor	r1, r1
+    1166:	91 1d       	adc	r25, r1
+    1168:	08 95       	ret
